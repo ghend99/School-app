@@ -514,7 +514,7 @@ body {
 
 #compose-message-container {
   position: relative;
-  top: -1035px;
+  top: -1030px;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 16%;

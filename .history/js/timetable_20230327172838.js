@@ -42,15 +42,15 @@ function makeRows(rows, cols) {
       cell.innerText = "14:20pm-15:20pm";
     }
 
-    // if (c === 7) {
-    //   var input = document.createElement("input");
-    //   input.type = "text";
-    //   input.className = "timetable-monday-lesson-1"; // set the CSS class
-    //   input.id = "timetable-input";
-    //   cell.appendChild(input); // put it into the DOM
-    // }
+    if (c === 7) {
+      var input = document.createElement("input");
+      input.type = "text";
+      input.className = "timetable-monday-lesson-1"; // set the CSS class
+      input.id = "timetable-input";
+      cell.appendChild(input); // put it into the DOM
+    }
 
-    if (c > 6 && c < 12) {
+    if (c > 7 && c < 12) {
       cell.innerText = "English";
     }
 

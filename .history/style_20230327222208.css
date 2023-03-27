@@ -3,7 +3,7 @@ button {
 }
 
 body {
-  height: 1200px;
+  height: 30px;
 }
 
 #main-container {
@@ -18,7 +18,6 @@ body {
   background-color: #faf9f6;
   border: solid;
   border-radius: 5px;
-  z-index: 1;
 }
 
 #header-container {
@@ -336,7 +335,7 @@ body {
 #login-container {
   position: absolute;
   display: flex;
-  top: 435px;
+  top: 700px;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 100%;
@@ -412,7 +411,7 @@ body {
 
 #create-account-container {
   position: relative;
-  top: -530px;
+  top: -350px;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 20%;
@@ -514,7 +513,7 @@ body {
 
 #compose-message-container {
   position: relative;
-  top: -1035px;
+  top: -850px;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 16%;
