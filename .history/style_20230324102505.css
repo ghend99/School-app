@@ -1,0 +1,10 @@
+#main-container {
+  position: relative;
+  max-width: 50%;
+  min-width: 30%;
+  height: 70vh;
+  top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightblue;
+}

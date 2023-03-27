@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main-container">
+      <!-- Header -->
+      <div id="header-container">
+        <p class="header-school-name">British School of Advancement</p>
+        <p class="header-school-slogan">Where the future starts</p>
+        <img
+          id="header-socials"
+          class="header-linkedin"
+          src="images/LinkedIn.png"
+        />
+        <img
+          id="header-socials"
+          class="header-facebook"
+          src="images/Facebook.png"
+        />
+        <img
+          id="header-socials"
+          class="header-twitter"
+          src="images/Twitter.png"
+        />
+        <img class="header-logo" src="images/logo.png" />
+        <input
+          id="header-login"
+          class="header-login-fullname"
+          type="text"
+          placeholder="Fullname..."
+        />
+        <input
+          id="header-login"
+          class="header-login-pin"
+          type="number"
+          placeholder="Pin..."
+        />
+        <img class="header-login-button" src="images/login-button.png" />
+        <img class="header-login-icon" src="images/login.png" />
+      </div>
+
+      <!-- Sidebar -->
+      <div id="sidebar-container">
+        <div id="sidebar-link">
+          <p class="sidebar-link-header">Search Student</p>
+          <input class="sidebar-link-search" placeholder="Student Name..." />
+        </div>
+        <div id="sidebar-link">
+          <p class="sidebar-link-header">Add Student</p>
+          <button class="sidebar-link-button">Add</button>
+        </div>
+        <div id="sidebar-link">
+          <p class="sidebar-link-header">Send Message</p>
+          <button class="sidebar-link-button">Compose</button>
+        </div>
+        <div id="sidebar-link">
+          <p class="sidebar-link-header">Add Referal</p>
+          <button class="sidebar-link-button">Add</button>
+        </div>
+        <div id="sidebar-link">
+          <p class="sidebar-link-header">Show Timetable</p>
+          <button class="sidebar-link-button">Show</button>
+        </div>
+        <div id="sidebar-link">
+          <p class="sidebar-link-header">Show Inbox</p>
+          <button class="sidebar-link-button">Show</button>
+        </div>
+      </div>
+
+      <!-- Student Information Container -->
+      <div id="student-information-container">
+        <h1 class="student-information-header">Student Name: Greg Piercer</h1>
+        <h3 class="student-information-general-header">General Information:</h3>
+        <p id="student-information" class="student-information-firstname">
+          First Name - Greg
+        </p>
+        <p id="student-information" class="student-information-lastname">
+          Last Name - Piercer
+        </p>
+        <p id="student-information" class="student-information-year">
+          Year - 12
+        </p>
+        <p id="student-information" class="student-information-referals">
+          Referals - 0
+        </p>
+      </div>
+
+      <!-- Student Management Container -->
+      <div id="student-management-container">
+        <h1 class="student-management-heading">Timetable</h1>
+        <img class="student-management-close" src="images/Close.png" />
+        <!-- <div id="timetable-container"></div> -->
+        <div id="inbox-container">
+          <div id="inbox-header">
+            <p>Date</p>
+            <p>Sender</p>
+            <p>Reciever</p>
+            <p>Message</p>
+          </div>
+          <div id="inbox-line">
+            <p>11/06/22</p>
+            <p>Greg Piercer</p>
+            <p>Martha Johnson</p>
+            <p>Can we review tuesdays plans?</p>
+          </div>
+          <div id="inbox-line">
+            <p>11/06/22</p>
+            <p>Greg Piercer</p>
+            <p>Martha Johnson</p>
+            <p>Can we review tuesdays plans?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Container -->
+    <div id="login-container"></div>
+
+    <div id="create-account-container"></div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/timetable.js"></script>
+  </body>
+</html>

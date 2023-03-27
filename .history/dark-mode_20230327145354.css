@@ -1,0 +1,12 @@
+#main-container {
+  --body-bg: #faf9f6;
+  --text-color: 
+
+
+
+
+
+  background-color: var(--body-bg);
+  color: var(--text-color);
+}
+

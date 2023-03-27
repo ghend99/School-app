@@ -1,0 +1,5 @@
+#main-container {
+  --body-bg: #faf9f6;
+
+  background-color: var(--body-bg);
+}
