@@ -43,11 +43,6 @@ function makeRows(rows, cols) {
     }
 
     if (c === 7) {
-      var input = document.createElement("input");
-      input.type = "text";
-      input.className = "timetable-monday-lesson-1"; // set the CSS class
-      input.id = "timetable-input";
-      cell.appendChild(input); // put it into the DOM
     }
 
     if (c > 7 && c < 12) {
