@@ -50,7 +50,7 @@ function makeRows(rows, cols) {
     //   cell.appendChild(input); // put it into the DOM
     // }
 
-    if (c > 6 && c < 12) {
+    if (c > 7 && c < 12) {
       cell.innerText = "English";
     }
 
