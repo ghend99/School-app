@@ -7,10 +7,12 @@ const sendMessage = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   message = composeMessageText.value;
   const messageReciever = composeMessageReciever.value;
-  const reciever = students.filter(
+  const reciever = studentsAccessed.filter(
     (stu) => stu.fullName === `${messageReciever}`
   );
-
+  console.log(messageReciever);
+  console.log(studentsAccessed);
+  console.log(reciever);
   if (reciever.length === 0) {
     alert(`Not a valid user`);
   } else {

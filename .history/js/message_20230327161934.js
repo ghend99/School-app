@@ -10,7 +10,9 @@ const sendMessage = function () {
   const reciever = students.filter(
     (stu) => stu.fullName === `${messageReciever}`
   );
-
+  console.log(messageReciever);
+  console.log(studentsAccessed);
+  console.log(reciever);
   if (reciever.length === 0) {
     alert(`Not a valid user`);
   } else {
