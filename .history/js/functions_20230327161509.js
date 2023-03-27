@@ -27,7 +27,7 @@ const Student = class {
 
 const login = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
-
+  console.log(studentsAccessed);
   const loginName = headerFullNameInput.value;
   const loginPin = headerPinInput.value;
   const target = students.filter(
@@ -87,39 +87,40 @@ const createStudent = function () {
     createAccountPinInput.value,
     createAccountRepinInput.value
   );
-  // if (pins.includes(createAccountPinInput.value)) {
-  //   document.querySelector(".create-account-pin-error").innerText =
-  //     "Pin already in use";
-  // } else if (createAccountFirstnameInput.value === "") {
-  //   document.querySelector(
-  //     ".create-account-fullname-error"
-  //   ).innerText = `No First Name`;
-  // } else if (createAccountLastnameInput.value === "") {
-  //   document.querySelector(".create-account-lastname-error").innerText =
-  //     "No Last Name";
-  // } else if (createAccountYearInput.value === "") {
-  //   document.querySelector(".create-account-year-error").innerText = "No Year";
-  // } else if (
-  //   createAccountYearInput.value < 4 ||
-  //   createAccountYearInput.value > 13
-  // ) {
-  //   document.querySelector(".create-account-year-error").innerText =
-  //     "Year must be between 4 and 13";
-  // } else if (createAccountPinInput.value === "") {
-  //   document.querySelector(".create-account-pin-error").innerText = "No Pin";
-  // } else if (createAccountRepinInput.value === "") {
-  //   document.querySelector(".create-account-repin-error").innerText =
-  //     "Need to check Pin";
-  // } else if (createAccountPinInput != createAccountRepinInput) {
-  //   document.querySelector(".create-account-repin-error").innerText =
-  //     "Pins do not match";
-
-  students.push(newStudent);
-  console.log(students);
-  pins.push(createAccountPinInput.value);
-  // let studentsStored = JSON.stringify(students);
-  // localStorage.setItem(`students`, studentsStored);
-  createAccountModalSubmit();
+  if (pins.includes(createAccountPinInput.value)) {
+    document.querySelector(".create-account-pin-error").innerText =
+      "Pin already in use";
+  } else if (createAccountFirstnameInput.value === "") {
+    document.querySelector(
+      ".create-account-fullname-error"
+    ).innerText = `No First Name`;
+  } else if (createAccountLastnameInput.value === "") {
+    document.querySelector(".create-account-lastname-error").innerText =
+      "No Last Name";
+  } else if (createAccountYearInput.value === "") {
+    document.querySelector(".create-account-year-error").innerText = "No Year";
+  } else if (
+    createAccountYearInput.value < 4 ||
+    createAccountYearInput.value > 13
+  ) {
+    document.querySelector(".create-account-year-error").innerText =
+      "Year must be between 4 and 13";
+  } else if (createAccountPinInput.value === "") {
+    document.querySelector(".create-account-pin-error").innerText = "No Pin";
+  } else if (createAccountRepinInput.value === "") {
+    document.querySelector(".create-account-repin-error").innerText =
+      "Need to check Pin";
+  } else if (createAccountPinInput != createAccountRepinInput) {
+    document.querySelector(".create-account-repin-error").innerText =
+      "Pins do not match";
+  } else {
+    students.push(newStudent);
+    console.log(students);
+    pins.push(createAccountPinInput.value);
+    // let studentsStored = JSON.stringify(students);
+    // localStorage.setItem(`students`, studentsStored);
+    createAccountModalSubmit();
+  }
 };
 
 const createStudentInputReset = function () {

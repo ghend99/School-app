@@ -113,13 +113,14 @@ const createStudent = function () {
   // } else if (createAccountPinInput != createAccountRepinInput) {
   //   document.querySelector(".create-account-repin-error").innerText =
   //     "Pins do not match";
-
-  students.push(newStudent);
-  console.log(students);
-  pins.push(createAccountPinInput.value);
-  // let studentsStored = JSON.stringify(students);
-  // localStorage.setItem(`students`, studentsStored);
-  createAccountModalSubmit();
+ 
+    students.push(newStudent);
+    console.log(students);
+    pins.push(createAccountPinInput.value);
+    // let studentsStored = JSON.stringify(students);
+    // localStorage.setItem(`students`, studentsStored);
+    createAccountModalSubmit();
+  }
 };
 
 const createStudentInputReset = function () {
