@@ -159,9 +159,9 @@ const showPin = function () {
 
 const showPinLoginModal = function () {
   if (loginModalPin.type === "password") {
-    loginModalPin.type = "number";
-  } else if (loginModalPin.type === "number") {
-    loginModalPin.type = "password";
+    headerPinInput.type = "number";
+  } else if (headerPinInput.type === "number") {
+    headerPinInput.type = "password";
   }
 };
 
