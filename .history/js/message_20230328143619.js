@@ -1,3 +1,4 @@
+let date = new Date(Date.now()).toLocaleString();
 let objReciever;
 let objSender;
 let currentAccount;
@@ -28,10 +29,10 @@ const sendMessage = function () {
 
 const updateInbox = function () {
   const html = ` <div id="inbox-line">
-  <p>${new Date(Date.now()).toLocaleString()}</p>
+  <p>${date}</p>
   <p>${objSender.fullName}</p>
   <p>${objReciever.fullName}</p>
-  <p>${subject}
+  <p>${obj}
   <p>${message}</p>
 </div>
   `;

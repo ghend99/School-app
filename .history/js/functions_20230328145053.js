@@ -232,28 +232,38 @@ const darkModeOff = function () {
   headerPinInput.classList.remove("dark-mode-input");
   sidebarAddReferalInput.classList.remove("dark-mode-input");
   sidebarStudentSearchInput.classList.remove("dark-mode-input");
+
   loginContainer.classList.remove("dark-mode");
   loginContainer.style.backgroundColor = "#faf9f6";
+
   document
     .querySelectorAll(".login-input")
     .forEach((el) => el.classList.remove("dark-mode-input"));
   loginSubmit.classList.remove("dark-mode-button");
   loginSubmit.style.backgroundColor = "black";
   loginSubmit.style.color = "white";
+
   createAccountContainer.classList.remove("dark-mode");
   createAccountContainer.style.backgroundColor = "#faf9f6";
   document
     .querySelectorAll(".create-account-input")
     .forEach((el) => el.classList.remove("dark-mode-input"));
+
   composeMessageContainer.classList.remove("dark-mode");
   composeMessageContainer.style.backgroundColor = "#faf9f6";
+
   document
     .querySelectorAll(".compose-message-input")
     .forEach((el) => el.classList.remove("dark-mode-input"));
+  // composeMessageReciever.classList.remove("dark-mode-input");
+  // composeMessageSubject.classList.remove("dark-mode-input");
+
   composeMessageSubmitButton.style.backgroundColor = "black";
   composeMessageSubmitButton.style.color = "white";
+
   darkModeToggleOn.style.opacity = "1";
   darkModeToggleOff.style.opacity = "0";
+
   sidebarOpenMenu.src = "images/menu.png";
   headerLogin.src = "images/login-button.png";
   headerLogo.src = "images/logo.png";

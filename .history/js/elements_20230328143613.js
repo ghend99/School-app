@@ -90,11 +90,11 @@ const studentManagementClose = document.querySelector(
 const composeMessageModalClose = document.querySelector(
   ".compose-message-close"
 );
-const composeMessageReciever = document.getElementById(
-  "compose-message-reciever"
+const composeMessageReciever = document.querySelector(
+  ".compose-message-reciever"
 );
-const composeMessageSubject = document.getElementById(
-  "compose-message-subject"
+const composeMessageSubject = document.querySelector(
+  ".compose-message-subject"
 );
 const composeMessageText = document.querySelector(".compose-message-textarea");
 const composeMessageSubmitButton = document.querySelector(

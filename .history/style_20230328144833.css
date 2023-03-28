@@ -595,13 +595,13 @@ body {
   cursor: pointer;
 }
 
-#compose-message-input-reciever {
+#compose-message-reciever {
   position: absolute;
   left: 6%;
   top: 20%;
 }
 
-#compose-message-input-subject {
+.compose-message-subject {
   position: absolute;
   left: 6%;
   top: 30%;

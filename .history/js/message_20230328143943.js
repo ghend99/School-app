@@ -1,3 +1,4 @@
+let date = new Date(Date.now()).toLocaleString();
 let objReciever;
 let objSender;
 let currentAccount;
