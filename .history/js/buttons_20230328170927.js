@@ -71,7 +71,7 @@ headerLoginClose.addEventListener("click", function (e) {
 
 loginPinShow.addEventListener("click", function (e) {
   e.preventDefault();
-  showPinLoginModal();
+  showPin();
 });
 
 loginSubmit.addEventListener("click", function (e) {

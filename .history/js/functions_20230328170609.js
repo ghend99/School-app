@@ -152,16 +152,8 @@ const searchStudent = function () {
 const showPin = function () {
   if (headerPinInput.type === "password") {
     headerPinInput.type = "number";
-  } else if (headerPinInput.type === "number") {
+  } else if ((headerPinInput.type = "number")) {
     headerPinInput.type = "password";
-  }
-};
-
-const showPinLoginModal = function () {
-  if (loginModalPin.type === "password") {
-    loginModalPin.type = "number";
-  } else if (loginModalPin.type === "number") {
-    loginModalPin.type = "password";
   }
 };
 
