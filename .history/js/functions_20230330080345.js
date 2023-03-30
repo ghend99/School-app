@@ -170,8 +170,8 @@ const addReferal = function () {
   } else {
     console.log(target);
     target["referals"] = target.referals + 1;
-    studentInformationReferals.textContent =
-      target.referals < 0 ? "Referals: 0" : `Referals: ${target.referals}`;
+    // studentInformationReferals.textContent =
+    //   target.referals < 0 ? "Referals: 0" : `Referals: ${target.referals}`;
     sidebarAddReferalInput.value = "";
   }
 };

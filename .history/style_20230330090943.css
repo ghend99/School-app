@@ -429,7 +429,7 @@ input {
   position: absolute;
   top: 10%;
   font-size: 32px;
-  font-family: "Roboto", Arial;
+  font-family: "EB Garamond", Arial;
 }
 
 .login-input {
@@ -495,7 +495,6 @@ input {
   margin: 0;
   font-size: 25px;
   font-weight: bold;
-  font-family: "Roboto", Arial;
 }
 
 .create-account-close {
@@ -605,7 +604,6 @@ input {
   font-size: clamp(1.5rem, 2vw, 2rem);
   margin: 0;
   font-weight: bold;
-  font-family: "Roboto", Arial;
 }
 
 .compose-message-close {

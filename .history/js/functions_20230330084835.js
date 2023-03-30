@@ -174,6 +174,8 @@ const addReferal = function () {
       target.referals < 0 ? "Referals: 0" : `Referals: ${target.referals}`;
     sidebarAddReferalInput.value = "";
   }
+  if (target === currentAccount) {
+  }
 };
 
 const darkModeToggleOn = document.querySelector(".header-dark-mode-toggle");

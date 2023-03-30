@@ -164,7 +164,6 @@ const addReferal = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarAddReferalInput.value;
   const target = students.find((stu) => stu.fullName === `${searchParameter}`);
-  console.log(target);
   if (target.length === 0) {
     alert(`Not a valid user`);
   } else {
@@ -172,7 +171,7 @@ const addReferal = function () {
     target["referals"] = target.referals + 1;
     studentInformationReferals.textContent =
       target.referals < 0 ? "Referals: 0" : `Referals: ${target.referals}`;
-    sidebarAddReferalInput.value = "";
+    // sidebarAddReferalInput.value = "";
   }
 };
 

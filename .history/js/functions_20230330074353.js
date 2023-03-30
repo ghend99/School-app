@@ -132,14 +132,12 @@ const searchStudent = function () {
   if (searchResult.length === 0) {
     alert(`Not a valid user`);
   } else {
-    studentInformationHeader.textContent = `Student: ${searchResult.fullName}`;
-    studentInformationFirstname.textContent = `First Name: ${searchResult.firstName}`;
-    studetnInformationLastname.textContent = `Last Name: ${searchResult.lastName}`;
-    studentInformationYear.textContent = `Year Group: ${searchResult.year}`;
+    studentInformationHeader.textContent = `Student: ${targrt.fullName}`;
+    studentInformationFirstname.textContent = `First Name: ${target.firstName}`;
+    studetnInformationLastname.textContent = `Last Name: ${target.lastName}`;
+    studentInformationYear.textContent = `Year Group: ${target.year}`;
     studentInformationReferals.text =
-      searchResult.referals > 0
-        ? `Referals: ${searchResult.referals}`
-        : `Referals: 0`;
+      target.referals > 0 ? "Referals: 0" : `Referals: ${target.referals}`;
     sidebarStudentSearchInput.textContent = "";
   }
 };
@@ -164,7 +162,6 @@ const addReferal = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarAddReferalInput.value;
   const target = students.find((stu) => stu.fullName === `${searchParameter}`);
-  console.log(target);
   if (target.length === 0) {
     alert(`Not a valid user`);
   } else {

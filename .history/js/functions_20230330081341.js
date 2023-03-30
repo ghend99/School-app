@@ -170,6 +170,8 @@ const addReferal = function () {
   } else {
     console.log(target);
     target["referals"] = target.referals + 1;
+  }
+  if (target === currentAccount) {
     studentInformationReferals.textContent =
       target.referals < 0 ? "Referals: 0" : `Referals: ${target.referals}`;
     sidebarAddReferalInput.value = "";
