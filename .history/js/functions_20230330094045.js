@@ -30,23 +30,21 @@ const login = function () {
 
   const loginName = headerFullNameInput.value;
   const loginPin = headerPinInput.value;
-  const target = students.filter(
+  const target = students.find(
     (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
   );
-
   console.log(target);
   if (target.length === 0) {
     alert("Incorrect login credentials");
   } else {
-    const obj = { ...target[0] };
     headerFullNameInput.value = "";
     headerPinInput.value = "";
-    studentInformationHeader.textContent = `Student Name: ${obj.fullName}`;
-    studentInformationFirstname.textContent = `First Name: ${obj.firstName}`;
-    studetnInformationLastname.textContent = `Last Name: ${obj.lastName}`;
-    studentInformationYear.textContent = `Year Group: ${obj.year}`;
+    studentInformationHeader.textContent = `Student Name: ${target.fullName}`;
+    studentInformationFirstname.textContent = `First Name: ${target.firstName}`;
+    studetnInformationLastname.textContent = `Last Name: ${target.lastName}`;
+    studentInformationYear.textContent = `Year Group: ${target.year}`;
     studentInformationReferals.textContent =
-      obj.referals < 0 ? "Referals: 0" : `Referals: ${obj.referals}`;
+      target.referals < 0 ? "Referals: 0" : `Referals: ${target.referals}`;
     currentAccount = target;
     mainContainer.style.opacity = "1";
   }
@@ -56,24 +54,20 @@ const loginModal = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const loginName = loginModalFullname.value;
   const loginPin = loginModalPin.value;
-  const target = students.filter(
+  const target = students.find(
     (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
   );
-  console.log(loginName);
-  console.log(loginPin);
-  console.log(target);
   if (target.length === 0) {
     alert("Incorrect login credentials");
   } else {
-    const obj = { ...target[0] };
     headerFullNameInput.value = "";
     headerPinInput.value = "";
-    studentInformationHeader.textContent = `Student Name: ${obj.fullName}`;
-    studentInformationFirstname.textContent = `First Name: ${obj.firstName}`;
-    studetnInformationLastname.textContent = `Last Name: ${obj.lastName}`;
-    studentInformationYear.textContent = `Year Group: ${obj.year}`;
+    studentInformationHeader.textContent = `Student Name: ${target.fullName}`;
+    studentInformationFirstname.textContent = `First Name: ${target.firstName}`;
+    studetnInformationLastname.textContent = `Last Name: ${target.lastName}`;
+    studentInformationYear.textContent = `Year Group: ${target.year}`;
     studentInformationReferals.textContent =
-      obj.referals < 0 ? "Referals: 0" : `Referals: ${obj.referals}`;
+      target.referals < 0 ? "Referals: 0" : `Referals: ${target.referals}`;
     currentAccount = target;
     mainContainer.style.opacity = "1";
   }
@@ -87,40 +81,41 @@ const createStudent = function () {
     createAccountPinInput.value,
     createAccountRepinInput.value
   );
-  // if (pins.includes(createAccountPinInput.value)) {
-  //   document.querySelector(".create-account-pin-error").innerText =
-  //     "Pin already in use";
-  // } else if (createAccountFirstnameInput.value === "") {
-  //   document.querySelector(
-  //     ".create-account-fullname-error"
-  //   ).innerText = `No First Name`;
-  // } else if (createAccountLastnameInput.value === "") {
-  //   document.querySelector(".create-account-lastname-error").innerText =
-  //     "No Last Name";
-  // } else if (createAccountYearInput.value === "") {
-  //   document.querySelector(".create-account-year-error").innerText = "No Year";
-  // } else if (
-  //   createAccountYearInput.value < 4 ||
-  //   createAccountYearInput.value > 13
-  // ) {
-  //   document.querySelector(".create-account-year-error").innerText =
-  //     "Year must be between 4 and 13";
-  // } else if (createAccountPinInput.value === "") {
-  //   document.querySelector(".create-account-pin-error").innerText = "No Pin";
-  // } else if (createAccountRepinInput.value === "") {
-  //   document.querySelector(".create-account-repin-error").innerText =
-  //     "Need to check Pin";
-  // } else if (createAccountPinInput != createAccountRepinInput) {
-  //   document.querySelector(".create-account-repin-error").innerText =
-  //     "Pins do not match";
-  // } else {
-  //   students.push(newStudent);
-  //   console.log(students);
-  //   pins.push(createAccountPinInput.value);
-  //   // let studentsStored = JSON.stringify(students);
-  //   // localStorage.setItem(`students`, studentsStored);
-  //   createAccountModalSubmit();
-  // }
+  if (pins.includes(createAccountPinInput.value)) {
+    document.querySelector(".create-account-pin-error").innerText =
+      "Pin already in use";
+  } else if (createAccountFirstnameInput.value === "") {
+    document.querySelector(
+      ".create-account-fullname-error"
+    ).innerText = `No First Name`;
+    break createStudent
+  } else if (createAccountLastnameInput.value === "") {
+    document.querySelector(".create-account-lastname-error").innerText =
+      "No Last Name";
+  } else if (createAccountYearInput.value === "") {
+    document.querySelector(".create-account-year-error").innerText = "No Year";
+  } else if (
+    createAccountYearInput.value < 4 ||
+    createAccountYearInput.value > 13
+  ) {
+    document.querySelector(".create-account-year-error").innerText =
+      "Year must be between 4 and 13";
+  } else if (createAccountPinInput.value === "") {
+    document.querySelector(".create-account-pin-error").innerText = "No Pin";
+  } else if (createAccountRepinInput.value === "") {
+    document.querySelector(".create-account-repin-error").innerText =
+      "Need to check Pin";
+  } else if (createAccountPinInput != createAccountRepinInput) {
+    document.querySelector(".create-account-repin-error").innerText =
+      "Pins do not match";
+  } else {
+    students.push(newStudent);
+    console.log(students);
+    pins.push(createAccountPinInput.value);
+    // let studentsStored = JSON.stringify(students);
+    // localStorage.setItem(`students`, studentsStored);
+    createAccountModalSubmit();
+  }
 };
 const createStudentInputReset = function () {
   createAccountFirstnameInput.value = "";
@@ -133,19 +128,20 @@ const createStudentInputReset = function () {
 const searchStudent = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarStudentSearchInput.value;
-  const searchResult = students.filter(
+  const searchResult = students.find(
     (stu) => stu.fullName === `${searchParameter}`
   );
   if (searchResult.length === 0) {
     alert(`Not a valid user`);
   } else {
-    const obj = { ...searchResult[0] };
-    studentInformationHeader.textContent = `Student: ${obj.fullName}`;
-    studentInformationFirstname.textContent = `First Name: ${obj.firstName}`;
-    studetnInformationLastname.textContent = `Last Name: ${obj.lastName}`;
-    studentInformationYear.textContent = `Year Group: ${obj.year}`;
+    studentInformationHeader.textContent = `Student: ${searchResult.fullName}`;
+    studentInformationFirstname.textContent = `First Name: ${searchResult.firstName}`;
+    studetnInformationLastname.textContent = `Last Name: ${searchResult.lastName}`;
+    studentInformationYear.textContent = `Year Group: ${searchResult.year}`;
     studentInformationReferals.text =
-      obj.referals > 0 ? "Referals: 0" : `Referals: ${obj.referals}`;
+      searchResult.referals > 0
+        ? `Referals: ${searchResult.referals}`
+        : `Referals: 0`;
     sidebarStudentSearchInput.textContent = "";
   }
 };
@@ -169,16 +165,15 @@ const showPinLoginModal = function () {
 const addReferal = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarAddReferalInput.value;
-  const target = students.filter(
-    (stu) => stu.fullName === `${searchParameter}`
-  );
+  const target = students.find((stu) => stu.fullName === `${searchParameter}`);
+  console.log(target);
   if (target.length === 0) {
     alert(`Not a valid user`);
   } else {
-    obj = { ...target[0] };
-    obj["referals"] = obj.referals + 1;
+    console.log(target);
+    target["referals"] = target.referals + 1;
     studentInformationReferals.textContent =
-      obj.referals < 0 ? "Referals: 0" : `Referals: ${obj.referals}`;
+      target.referals < 0 ? "Referals: 0" : `Referals: ${target.referals}`;
     sidebarAddReferalInput.value = "";
   }
 };

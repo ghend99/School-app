@@ -30,23 +30,21 @@ const login = function () {
 
   const loginName = headerFullNameInput.value;
   const loginPin = headerPinInput.value;
-  const target = students.filter(
+  const target = students.find(
     (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
   );
-
   console.log(target);
   if (target.length === 0) {
     alert("Incorrect login credentials");
   } else {
-    const obj = { ...target[0] };
     headerFullNameInput.value = "";
     headerPinInput.value = "";
-    studentInformationHeader.textContent = `Student Name: ${obj.fullName}`;
-    studentInformationFirstname.textContent = `First Name: ${obj.firstName}`;
-    studetnInformationLastname.textContent = `Last Name: ${obj.lastName}`;
-    studentInformationYear.textContent = `Year Group: ${obj.year}`;
+    studentInformationHeader.textContent = `Student Name: ${target.fullName}`;
+    studentInformationFirstname.textContent = `First Name: ${target.firstName}`;
+    studetnInformationLastname.textContent = `Last Name: ${target.lastName}`;
+    studentInformationYear.textContent = `Year Group: ${target.year}`;
     studentInformationReferals.textContent =
-      obj.referals < 0 ? "Referals: 0" : `Referals: ${obj.referals}`;
+      target.referals < 0 ? "Referals: 0" : `Referals: ${target.referals}`;
     currentAccount = target;
     mainContainer.style.opacity = "1";
   }
@@ -56,24 +54,20 @@ const loginModal = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const loginName = loginModalFullname.value;
   const loginPin = loginModalPin.value;
-  const target = students.filter(
+  const target = students.find(
     (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
   );
-  console.log(loginName);
-  console.log(loginPin);
-  console.log(target);
   if (target.length === 0) {
     alert("Incorrect login credentials");
   } else {
-    const obj = { ...target[0] };
     headerFullNameInput.value = "";
     headerPinInput.value = "";
-    studentInformationHeader.textContent = `Student Name: ${obj.fullName}`;
-    studentInformationFirstname.textContent = `First Name: ${obj.firstName}`;
-    studetnInformationLastname.textContent = `Last Name: ${obj.lastName}`;
-    studentInformationYear.textContent = `Year Group: ${obj.year}`;
+    studentInformationHeader.textContent = `Student Name: ${target.fullName}`;
+    studentInformationFirstname.textContent = `First Name: ${target.firstName}`;
+    studetnInformationLastname.textContent = `Last Name: ${target.lastName}`;
+    studentInformationYear.textContent = `Year Group: ${target.year}`;
     studentInformationReferals.textContent =
-      obj.referals < 0 ? "Referals: 0" : `Referals: ${obj.referals}`;
+      target.referals < 0 ? "Referals: 0" : `Referals: ${target.referals}`;
     currentAccount = target;
     mainContainer.style.opacity = "1";
   }
@@ -133,19 +127,20 @@ const createStudentInputReset = function () {
 const searchStudent = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarStudentSearchInput.value;
-  const searchResult = students.filter(
+  const searchResult = students.find(
     (stu) => stu.fullName === `${searchParameter}`
   );
   if (searchResult.length === 0) {
     alert(`Not a valid user`);
   } else {
-    const obj = { ...searchResult[0] };
-    studentInformationHeader.textContent = `Student: ${obj.fullName}`;
-    studentInformationFirstname.textContent = `First Name: ${obj.firstName}`;
-    studetnInformationLastname.textContent = `Last Name: ${obj.lastName}`;
-    studentInformationYear.textContent = `Year Group: ${obj.year}`;
+    studentInformationHeader.textContent = `Student: ${searchResult.fullName}`;
+    studentInformationFirstname.textContent = `First Name: ${searchResult.firstName}`;
+    studetnInformationLastname.textContent = `Last Name: ${searchResult.lastName}`;
+    studentInformationYear.textContent = `Year Group: ${searchResult.year}`;
     studentInformationReferals.text =
-      obj.referals > 0 ? "Referals: 0" : `Referals: ${obj.referals}`;
+      searchResult.referals > 0
+        ? `Referals: ${searchResult.referals}`
+        : `Referals: 0`;
     sidebarStudentSearchInput.textContent = "";
   }
 };
@@ -169,16 +164,15 @@ const showPinLoginModal = function () {
 const addReferal = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarAddReferalInput.value;
-  const target = students.filter(
-    (stu) => stu.fullName === `${searchParameter}`
-  );
+  const target = students.find((stu) => stu.fullName === `${searchParameter}`);
+  console.log(target);
   if (target.length === 0) {
     alert(`Not a valid user`);
   } else {
-    obj = { ...target[0] };
-    obj["referals"] = obj.referals + 1;
+    console.log(target);
+    target["referals"] = target.referals + 1;
     studentInformationReferals.textContent =
-      obj.referals < 0 ? "Referals: 0" : `Referals: ${obj.referals}`;
+      target.referals < 0 ? "Referals: 0" : `Referals: ${target.referals}`;
     sidebarAddReferalInput.value = "";
   }
 };
