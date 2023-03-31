@@ -133,20 +133,19 @@ const createStudentInputReset = function () {
 const searchStudent = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarStudentSearchInput.value;
-  const searchResult = students.find(
+  const searchResult = students.filter(
     (stu) => stu.fullName === `${searchParameter}`
   );
   if (searchResult.length === 0) {
     alert(`Not a valid user`);
   } else {
-    studentInformationHeader.textContent = `Student: ${searchResult.fullName}`;
-    studentInformationFirstname.textContent = `First Name: ${searchResult.firstName}`;
-    studetnInformationLastname.textContent = `Last Name: ${searchResult.lastName}`;
-    studentInformationYear.textContent = `Year Group: ${searchResult.year}`;
+    const obj = { ...searchResult[0] };
+    studentInformationHeader.textContent = `Student: ${obj.fullName}`;
+    studentInformationFirstname.textContent = `First Name: ${obj.firstName}`;
+    studetnInformationLastname.textContent = `Last Name: ${obj.lastName}`;
+    studentInformationYear.textContent = `Year Group: ${obj.year}`;
     studentInformationReferals.text =
-      searchResult.referals > 0
-        ? "Referals: 0"
-        : `Referals: ${searchResult.referals}`;
+      obj.referals > 0 ? "Referals: 0" : `Referals: ${obj.referals}`;
     sidebarStudentSearchInput.textContent = "";
   }
 };
@@ -170,13 +169,16 @@ const showPinLoginModal = function () {
 const addReferal = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarAddReferalInput.value;
-  const target = students.find((stu) => stu.fullName === `${searchParameter}`);
+  const target = students.filter(
+    (stu) => stu.fullName === `${searchParameter}`
+  );
   if (target.length === 0) {
     alert(`Not a valid user`);
   } else {
-    target["referals"] = target.referals + 1;
+    obj = { ...target[0] };
+    obj["referals"] = obj.referals + 1;
     studentInformationReferals.textContent =
-      target.referals < 0 ? "Referals: 0" : `Referals: ${target.referals}`;
+      obj.referals < 0 ? "Referals: 0" : `Referals: ${obj.referals}`;
     sidebarAddReferalInput.value = "";
   }
 };

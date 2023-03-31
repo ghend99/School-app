@@ -5,7 +5,7 @@ function makeRows(rows, cols) {
   timetable.style.setProperty("--grid-cols", cols);
   for (c = 0; c < rows * cols; c++) {
     let cell = document.createElement("div");
-
+    cell.innerText = c + 1;
     timetable.appendChild(cell).className = "grid-item";
     if (c === 0) {
       cell.innerText = "Time";
@@ -149,104 +149,3 @@ function makeRows(rows, cols) {
 }
 
 makeRows(6, 6);
-
-const monday1 = document.querySelector(".lesson-monday-1");
-const monday2 = document.querySelector(".lesson-monday-2");
-const monday3 = document.querySelector(".lesson-monday-4");
-const monday4 = document.querySelector(".lesson-monday-4");
-const monday5 = document.querySelector(".lesson-monday-5");
-
-const tuesday1 = document.querySelector(".lesson-tuesday-1");
-const tuesday2 = document.querySelector(".lesson-tuesday-2");
-const tuesday3 = document.querySelector(".lesson-tuesday-3");
-const tuesday4 = document.querySelector(".lesson-tuesday-4");
-const tuesday5 = document.querySelector(".lesson-tuesday-5");
-
-const wednesday1 = document.querySelector(".lesson-wednesday-1");
-const wednesday2 = document.querySelector(".lesson-wednesday-2");
-const wednesday3 = document.querySelector(".lesson-wednesday-3");
-const wednesday4 = document.querySelector(".lesson-wednesday-4");
-const wednesday5 = document.querySelector(".lesson-wednesday-5");
-
-const thursday1 = document.querySelector(".lesson-thursday-1");
-const thursday2 = document.querySelector(".lesson-thursday-2");
-const thursday3 = document.querySelector(".lesson-thursday-3");
-const thursday4 = document.querySelector(".lesson-thursday-4");
-const thursday5 = document.querySelector(".lesson-thursday-5");
-
-const friday1 = document.querySelector(".lesson-friday-1");
-const friday2 = document.querySelector(".lesson-friday-2");
-const friday3 = document.querySelector(".lesson-friday-3");
-const friday4 = document.querySelector(".lesson-friday-4");
-const friday5 = document.querySelector(".lesson-friday-5");
-
-sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  currentAccount.lessons1.push(
-    monday1.value,
-    tuesday1.value,
-    wednesday1.value,
-    thursday1.value,
-    friday1.value
-  );
-  currentAccount.lessons2.push(
-    monday2.value,
-    tuesday2.value,
-    wednesday2.value,
-    thursday2.value,
-    friday2.value
-  );
-  currentAccount.lessons3.push(
-    monday3.value,
-    tuesday3.value,
-    wednesday3.value,
-    thursday3.value,
-    friday3.value
-  );
-  currentAccount.lessons4.push(
-    monday4.value,
-    tuesday4.value,
-    wednesday4.value,
-    thursday4.value,
-    friday4.value
-  );
-  currentAccount.lessons5.push(
-    monday5.value,
-    tuesday5.value,
-    wednesday5.value,
-    thursday5.value,
-    friday5.value
-  );
-});
-
-const showStudentTiemtable = function () {
-  monday1.value = currentAccount.lessons1[0];
-  monday2.value = currentAccount.lessons2[1];
-  monday3.value = currentAccount.lessons3[2];
-  monday4.value = currentAccount.lessons4[3];
-  monday5.value = currentAccount.lessons5[4];
-
-  tuesday1.value = currentAccount.lessons1[0];
-  tuesday2.value = currentAccount.lessons2[1];
-  tuesday3.value = currentAccount.lessons3[2];
-  tuesday4.value = currentAccount.lessons4[3];
-  tuesday5.value = currentAccount.lessons5[4];
-
-  wednesday1.value = currentAccount.lessons1[0];
-  wednesday2.value = currentAccount.lessons2[1];
-  wednesday3.value = currentAccount.lessons3[2];
-  wednesday4.value = currentAccount.lessons4[3];
-  wednesday5.value = currentAccount.lessons5[4];
-
-  thursday1.value = currentAccount.lessons1[0];
-  thursday2.value = currentAccount.lessons2[1];
-  thursday3.value = currentAccount.lessons3[2];
-  thursday4.value = currentAccount.lessons4[3];
-  thursday5.value = currentAccount.lessons5[4];
-
-  friday1.value = currentAccount.lessons1[0];
-  friday2.value = currentAccount.lessons2[1];
-  friday3.value = currentAccount.lessons3[2];
-  friday4.value = currentAccount.lessons4[3];
-  friday5.value = currentAccount.lessons5[4];
-};

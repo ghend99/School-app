@@ -49,7 +49,6 @@ const timetableClose = function () {
   timetableContainer.style.zIndex = "0";
   studentManagmentHeader.textContent = "";
   studentManagementClose.style.opacity = "0";
-  sidebarUpdateTimetable.style.opacity = "0";
 };
 
 const inboxOpen = function () {

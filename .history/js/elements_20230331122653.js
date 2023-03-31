@@ -38,10 +38,7 @@ const sidebarShowTimetable = document.querySelector(".show-timetable");
 const sidebarShowInbox = document.querySelector(".show-inbox");
 const sidebarOpenMenu = document.querySelector(".sidebar-open-menu");
 const sidebarCloseMenu = document.querySelector(".sidebar-close-menu");
-const sidebarUpdateTimetable = document.getElementById(
-  "sidebar-link-timetable"
-);
-const sidebarUpdateTimetableBtn = document.querySelector(".update-timetable");
+const sidebarUpdateTimetable = document.getElementById("");
 
 /////////////////// Header ///////////////////
 const headerFullNameInput = document.getElementById("header-login-fullname");
