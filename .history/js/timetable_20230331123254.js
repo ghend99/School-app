@@ -152,7 +152,7 @@ makeRows(6, 6);
 
 const monday1 = document.querySelector(".lesson-monday-1");
 const monday2 = document.querySelector(".lesson-monday-2");
-const monday3 = document.querySelector(".lesson-monday-3");
+const monday3 = document.querySelector(".lesson-monday-4");
 const monday4 = document.querySelector(".lesson-monday-4");
 const monday5 = document.querySelector(".lesson-monday-5");
 
@@ -182,11 +182,6 @@ const friday5 = document.querySelector(".lesson-friday-5");
 
 sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  currentAccount.lessons1.length = 0;
-  currentAccount.lessons2.length = 0;
-  currentAccount.lessons3.length = 0;
-  currentAccount.lessons4.length = 0;
-  currentAccount.lessons5.length = 0;
   currentAccount.lessons1.push(
     monday1.value,
     tuesday1.value,
@@ -222,37 +217,4 @@ sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
     thursday5.value,
     friday5.value
   );
-  alert(`Timetable information submitted`);
 });
-
-const showStudentTiemtable = function () {
-  monday1.value = currentAccount.lessons1[0];
-  monday2.value = currentAccount.lessons2[1];
-  monday3.value = currentAccount.lessons3[2];
-  monday4.value = currentAccount.lessons4[3];
-  monday5.value = currentAccount.lessons5[4];
-
-  tuesday1.value = currentAccount.lessons1[0];
-  tuesday2.value = currentAccount.lessons2[1];
-  tuesday3.value = currentAccount.lessons3[2];
-  tuesday4.value = currentAccount.lessons4[3];
-  tuesday5.value = currentAccount.lessons5[4];
-
-  wednesday1.value = currentAccount.lessons1[0];
-  wednesday2.value = currentAccount.lessons2[1];
-  wednesday3.value = currentAccount.lessons3[2];
-  wednesday4.value = currentAccount.lessons4[3];
-  wednesday5.value = currentAccount.lessons5[4];
-
-  thursday1.value = currentAccount.lessons1[0];
-  thursday2.value = currentAccount.lessons2[1];
-  thursday3.value = currentAccount.lessons3[2];
-  thursday4.value = currentAccount.lessons4[3];
-  thursday5.value = currentAccount.lessons5[4];
-
-  friday1.value = currentAccount.lessons1[0];
-  friday2.value = currentAccount.lessons2[1];
-  friday3.value = currentAccount.lessons3[2];
-  friday4.value = currentAccount.lessons4[3];
-  friday5.value = currentAccount.lessons5[4];
-};

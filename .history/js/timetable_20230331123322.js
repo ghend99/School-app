@@ -152,7 +152,7 @@ makeRows(6, 6);
 
 const monday1 = document.querySelector(".lesson-monday-1");
 const monday2 = document.querySelector(".lesson-monday-2");
-const monday3 = document.querySelector(".lesson-monday-3");
+const monday3 = document.querySelector(".lesson-monday-4");
 const monday4 = document.querySelector(".lesson-monday-4");
 const monday5 = document.querySelector(".lesson-monday-5");
 
@@ -182,11 +182,6 @@ const friday5 = document.querySelector(".lesson-friday-5");
 
 sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  currentAccount.lessons1.length = 0;
-  currentAccount.lessons2.length = 0;
-  currentAccount.lessons3.length = 0;
-  currentAccount.lessons4.length = 0;
-  currentAccount.lessons5.length = 0;
   currentAccount.lessons1.push(
     monday1.value,
     tuesday1.value,
@@ -222,7 +217,6 @@ sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
     thursday5.value,
     friday5.value
   );
-  alert(`Timetable information submitted`);
 });
 
 const showStudentTiemtable = function () {

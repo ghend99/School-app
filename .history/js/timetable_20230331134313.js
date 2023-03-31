@@ -226,6 +226,9 @@ sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
 });
 
 const showStudentTiemtable = function () {
+  if (lessons1.length === 0) {
+    monday1.value = "";
+  }
   monday1.value = currentAccount.lessons1[0];
   monday2.value = currentAccount.lessons2[1];
   monday3.value = currentAccount.lessons3[2];

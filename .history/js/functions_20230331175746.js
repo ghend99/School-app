@@ -38,16 +38,13 @@ const login = function () {
   const target = students.find(
     (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
   );
-
   currentAccount = target;
-
   console.log(target);
   if (target === undefined) {
     alert("Incorrect login credentials");
   } else {
     headerFullNameInput.value = "";
     headerPinInput.value = "";
-
     studentInformationHeader.textContent = `Student Name: ${currentAccount.fullName}`;
     studentInformationFirstname.textContent = `First Name: ${currentAccount.firstName}`;
     studetnInformationLastname.textContent = `Last Name: ${currentAccount.lastName}`;
@@ -56,7 +53,6 @@ const login = function () {
       currentAccount.referals < 0
         ? "Referals: 0"
         : `Referals: ${currentAccount.referals}`;
-
     mainContainer.style.opacity = "1";
     showStudentTiemtable();
   }
@@ -69,15 +65,12 @@ const loginModal = function () {
   const target = students.find(
     (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
   );
-
   currentAccount = target;
-
   if (target.length === 0) {
     alert("Incorrect login credentials");
   } else {
     headerFullNameInput.value = "";
     headerPinInput.value = "";
-
     studentInformationHeader.textContent = `Student Name: ${currentAccount.fullName}`;
     studentInformationFirstname.textContent = `First Name: ${currentAccount.firstName}`;
     studetnInformationLastname.textContent = `Last Name: ${currentAccount.lastName}`;
@@ -86,7 +79,6 @@ const loginModal = function () {
       currentAccount.referals < 0
         ? "Referals: 0"
         : `Referals: ${currentAccount.referals}`;
-
     mainContainer.style.opacity = "1";
   }
 };
@@ -107,7 +99,6 @@ const createStudent = function () {
   // localStorage.setItem(`students`, studentsStored);
   createAccountModalSubmit();
 };
-
 const createStudentInputReset = function () {
   createAccountFirstnameInput.value = "";
   createAccountLastnameInput.value = "";
@@ -131,11 +122,8 @@ const searchStudent = function () {
     studentInformationYear.textContent = `Year Group: ${searchResult.year}`;
     studentInformationReferals.text =
       searchResult.referals > 0
-
         ? "Referals: 0"
         : `Referals: ${searchResult.referals}`;
-
-
     sidebarStudentSearchInput.textContent = "";
   }
 };
@@ -160,17 +148,20 @@ const addReferal = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarAddReferalInput.value;
   const target = students.find((stu) => stu.fullName === `${searchParameter}`);
-
   if (target.length === 0) {
     alert(`Not a valid user`);
   } else {
-
     target["referals"] = target.referals + 1;
     studentInformationReferals.textContent =
       target.referals < 0 ? "Referals: 0" : `Referals: ${target.referals}`;
     sidebarAddReferalInput.value = "";
   }
 };
+
+const darkModeToggleOn = document.querySelector(".header-dark-mode-toggle");
+const darkModeToggleOff = document.querySelector(".header-light-mode-toggle");
+const headerLogo = document.querySelector(".header-logo");
+const createAccountInputs = document.getElementById("create-account-input");
 
 const darkModeOn = function () {
   mainContainer.classList.add("dark-mode");
@@ -247,3 +238,13 @@ const darkModeOff = function () {
   composeMessageModalClose.src = "images/Close.png";
   studentManagementClose.src = "images/close.png";
 };
+
+darkModeToggleOn.addEventListener("click", function (e) {
+  e.preventDefault();
+  darkModeOn();
+});
+
+darkModeToggleOff.addEventListener("click", function (e) {
+  e.preventDefault();
+  darkModeOff();
+});

@@ -187,7 +187,7 @@ sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
   currentAccount.lessons3.length = 0;
   currentAccount.lessons4.length = 0;
   currentAccount.lessons5.length = 0;
-  currentAccount.lessons1.push(
+  currentAccount.lessons5.push(
     monday1.value,
     tuesday1.value,
     wednesday1.value,

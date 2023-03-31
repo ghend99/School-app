@@ -182,11 +182,6 @@ const friday5 = document.querySelector(".lesson-friday-5");
 
 sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  currentAccount.lessons1.length = 0;
-  currentAccount.lessons2.length = 0;
-  currentAccount.lessons3.length = 0;
-  currentAccount.lessons4.length = 0;
-  currentAccount.lessons5.length = 0;
   currentAccount.lessons1.push(
     monday1.value,
     tuesday1.value,
@@ -223,6 +218,7 @@ sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
     friday5.value
   );
   alert(`Timetable information submitted`);
+  currentAccount.lessons = ;
 });
 
 const showStudentTiemtable = function () {
