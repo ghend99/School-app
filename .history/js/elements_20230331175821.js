@@ -113,7 +113,3 @@ const loginPinShow = document.querySelector(".login-pin-show");
 const loginSubmit = document.querySelector(".login-button-submit");
 
 /////////////////// Dark Mode ///////////////////
-const darkModeToggleOn = document.querySelector(".header-dark-mode-toggle");
-const darkModeToggleOff = document.querySelector(".header-light-mode-toggle");
-const headerLogo = document.querySelector(".header-logo");
-const createAccountInputs = document.getElementById("create-account-input");

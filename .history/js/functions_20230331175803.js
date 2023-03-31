@@ -159,6 +159,11 @@ const addReferal = function () {
   }
 };
 
+const darkModeToggleOn = document.querySelector(".header-dark-mode-toggle");
+const darkModeToggleOff = document.querySelector(".header-light-mode-toggle");
+const headerLogo = document.querySelector(".header-logo");
+const createAccountInputs = document.getElementById("create-account-input");
+
 const darkModeOn = function () {
   mainContainer.classList.add("dark-mode");
   headerFullNameInput.classList.add("dark-mode-input");

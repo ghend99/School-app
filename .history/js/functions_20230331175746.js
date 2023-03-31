@@ -99,7 +99,6 @@ const createStudent = function () {
   // localStorage.setItem(`students`, studentsStored);
   createAccountModalSubmit();
 };
-
 const createStudentInputReset = function () {
   createAccountFirstnameInput.value = "";
   createAccountLastnameInput.value = "";
@@ -158,6 +157,11 @@ const addReferal = function () {
     sidebarAddReferalInput.value = "";
   }
 };
+
+const darkModeToggleOn = document.querySelector(".header-dark-mode-toggle");
+const darkModeToggleOff = document.querySelector(".header-light-mode-toggle");
+const headerLogo = document.querySelector(".header-logo");
+const createAccountInputs = document.getElementById("create-account-input");
 
 const darkModeOn = function () {
   mainContainer.classList.add("dark-mode");
@@ -234,3 +238,13 @@ const darkModeOff = function () {
   composeMessageModalClose.src = "images/Close.png";
   studentManagementClose.src = "images/close.png";
 };
+
+darkModeToggleOn.addEventListener("click", function (e) {
+  e.preventDefault();
+  darkModeOn();
+});
+
+darkModeToggleOff.addEventListener("click", function (e) {
+  e.preventDefault();
+  darkModeOff();
+});
