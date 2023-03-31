@@ -11,10 +11,6 @@ body {
   height: 1200px;
 }
 
-input {
-  font-family: "Roboto", Arial;
-}
-
 .dark-mode {
   background-color: black;
   color: white;
@@ -206,15 +202,6 @@ input {
   border-bottom: solid;
 }
 
-#sidebar-link-timetable {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 120px;
-  opacity: 0;
-  justify-content: center;
-}
-
 .sidebar-link-header {
   position: absolute;
   font-family: "Roboto", arial;
@@ -385,7 +372,6 @@ input {
   height: 50px;
   /* background-color: aqua; */
   overflow-y: auto;
-  font-family: "Roboto", Arial;
 }
 
 #inbox-line {
@@ -398,7 +384,6 @@ input {
   height: 50px;
   /* background-color: darkorange; */
   overflow-y: auto;
-  font-family: "EB Garamond", Arial;
 }
 
 #login-container {
@@ -438,7 +423,6 @@ input {
   position: absolute;
   top: 10%;
   font-size: 32px;
-  font-family: "Roboto", Arial;
 }
 
 .login-input {
@@ -504,7 +488,6 @@ input {
   margin: 0;
   font-size: 25px;
   font-weight: bold;
-  font-family: "Roboto", Arial;
 }
 
 .create-account-close {
@@ -614,7 +597,6 @@ input {
   font-size: clamp(1.5rem, 2vw, 2rem);
   margin: 0;
   font-weight: bold;
-  font-family: "Roboto", Arial;
 }
 
 .compose-message-close {

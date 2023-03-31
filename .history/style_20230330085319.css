@@ -1,18 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
-
 button {
   cursor: pointer;
-  font-family: "Roboto", Arial;
 }
 
 body {
   height: 1200px;
-}
-
-input {
-  font-family: "Roboto", Arial;
 }
 
 .dark-mode {
@@ -206,19 +199,10 @@ input {
   border-bottom: solid;
 }
 
-#sidebar-link-timetable {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 120px;
-  opacity: 0;
-  justify-content: center;
-}
-
 .sidebar-link-header {
   position: absolute;
   font-family: "Roboto", arial;
-  font-size: clamp(0.7rem, 1.2vw, 1.2rem);
+  font-size: clamp(0.7rem, 1.5vw, 1.2rem);
   font-weight: bold;
 }
 
@@ -273,7 +257,6 @@ input {
   top: 10px;
   left: 10px;
   font-size: clamp(1rem, 1vw, 2rem);
-  font-family: "Roboto", Arial;
   border-bottom: solid;
 }
 
@@ -282,7 +265,6 @@ input {
   top: 50px;
   left: 20px;
   font-size: clamp(1rem, 0.8vw, 2.5rem);
-  font-family: "EB Garamond", Arial;
   margin: 0;
 }
 
@@ -290,7 +272,6 @@ input {
   position: absolute;
   margin: 0;
   font-size: clamp(1rem, 0.4vw, 1.3rem);
-  font-family: "EB Garamond", Arial;
 }
 
 .student-information-firstname {
@@ -385,7 +366,6 @@ input {
   height: 50px;
   /* background-color: aqua; */
   overflow-y: auto;
-  font-family: "Roboto", Arial;
 }
 
 #inbox-line {
@@ -398,7 +378,6 @@ input {
   height: 50px;
   /* background-color: darkorange; */
   overflow-y: auto;
-  font-family: "EB Garamond", Arial;
 }
 
 #login-container {
@@ -438,7 +417,6 @@ input {
   position: absolute;
   top: 10%;
   font-size: 32px;
-  font-family: "Roboto", Arial;
 }
 
 .login-input {
@@ -504,7 +482,6 @@ input {
   margin: 0;
   font-size: 25px;
   font-weight: bold;
-  font-family: "Roboto", Arial;
 }
 
 .create-account-close {
@@ -614,7 +591,6 @@ input {
   font-size: clamp(1.5rem, 2vw, 2rem);
   margin: 0;
   font-weight: bold;
-  font-family: "Roboto", Arial;
 }
 
 .compose-message-close {

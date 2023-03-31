@@ -1,4 +1,4 @@
-let reciever;
+let objReciever;
 let objSender;
 let currentAccount;
 let message;
@@ -9,12 +9,17 @@ const sendMessage = function () {
   message = composeMessageText.value;
   subject = composeMessageSubject.value;
   const messageReciever = composeMessageReciever.value;
-  reciever = students.find((stu) => stu.fullName === `${messageReciever}`);
+  const reciever = students.find(
+    (stu) => stu.fullName === `${messageReciever}`
+  );
+
   if (reciever.length === 0) {
     alert(`Not a valid user`);
   } else {
-    reciever.inbox.push(message);
-    currentAccount.sent.push(message);
+    objReciever = { ...reciever[0] };
+    objSender = { ...currentAccount[0] };
+    objReciever.inbox.push(message);
+    objSender.sent.push(message);
     composeMessageReciever.value = "";
     composeMessageText.value = "";
     composeMessageSubject.value = "";
@@ -24,8 +29,8 @@ const sendMessage = function () {
 const updateInbox = function () {
   const html = ` <div id="inbox-line">
   <p>${new Date(Date.now()).toLocaleString()}</p>
-  <p>${currentAccount.fullName}</p>
-  <p>${reciever.fullName}</p>
+  <p>${objSender.fullName}</p>
+  <p>${objReciever.fullName}</p>
   <p>${subject}
   <p>${message}</p>
 </div>
