@@ -57,8 +57,6 @@ const login = function () {
 
     if (currentAccount.lessons1.length > 1) {
       showStudentTiemtable();
-    } else {
-      resetTimetableInputs();
     }
   }
 };

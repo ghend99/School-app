@@ -54,12 +54,7 @@ const login = function () {
         : `Referals: ${currentAccount.referals}`;
 
     mainContainer.style.opacity = "1";
-
-    if (currentAccount.lessons1.length > 1) {
-      showStudentTiemtable();
-    } else {
-      resetTimetableInputs();
-    }
+    showStudentTiemtable();
   }
 };
 
