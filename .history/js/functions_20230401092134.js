@@ -32,6 +32,7 @@ const Student = class {
 
 const login = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
+
   const loginName = headerFullNameInput.value;
   const loginPin = headerPinInput.value;
   const target = students.find(
@@ -54,12 +55,7 @@ const login = function () {
         : `Referals: ${currentAccount.referals}`;
 
     mainContainer.style.opacity = "1";
-
-    if (currentAccount.lessons1.length > 1) {
-      showStudentTiemtable();
-    } else {
-      resetTimetableInputs();
-    }
+    showStudentTiemtable();
   }
 };
 
@@ -76,6 +72,7 @@ const loginModal = function () {
   } else {
     headerFullNameInput.value = "";
     headerPinInput.value = "";
+
     studentInformationHeader.textContent = `Student Name: ${currentAccount.fullName}`;
     studentInformationFirstname.textContent = `First Name: ${currentAccount.firstName}`;
     studetnInformationLastname.textContent = `Last Name: ${currentAccount.lastName}`;
@@ -84,6 +81,7 @@ const loginModal = function () {
       currentAccount.referals < 0
         ? "Referals: 0"
         : `Referals: ${currentAccount.referals}`;
+
     mainContainer.style.opacity = "1";
   }
 };
@@ -96,8 +94,9 @@ const createStudent = function () {
     createAccountPinInput.value,
     createAccountRepinInput.value
   );
-  students.push(newStudent);
 
+  students.push(newStudent);
+  console.log(students);
   pins.push(createAccountPinInput.value);
   // let studentsStored = JSON.stringify(students);
   // localStorage.setItem(`students`, studentsStored);
@@ -146,7 +145,7 @@ const addReferal = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarAddReferalInput.value;
   const target = students.find((stu) => stu.fullName === `${searchParameter}`);
-
+  console.log(target);
   if (target === undefined) {
     alert(`Not a valid user`);
   } else {

@@ -32,6 +32,7 @@ const Student = class {
 
 const login = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
+
   const loginName = headerFullNameInput.value;
   const loginPin = headerPinInput.value;
   const target = students.find(
@@ -54,12 +55,7 @@ const login = function () {
         : `Referals: ${currentAccount.referals}`;
 
     mainContainer.style.opacity = "1";
-
-    if (currentAccount.lessons1.length > 1) {
-      showStudentTiemtable();
-    } else {
-      resetTimetableInputs();
-    }
+    showStudentTiemtable();
   }
 };
 
