@@ -745,9 +745,9 @@ input {
   }
 }
 
-@media screen and (min-width: 0) and (max-width: 425px) {
+@media screen and (min-width: 0) and (max-width: 375px) {
   #main-container {
-    top: 0;
+    top: -500px;
   }
 }
 
