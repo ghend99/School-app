@@ -152,7 +152,7 @@ makeRows(6, 6);
 
 const monday1 = document.querySelector(".lesson-monday-1");
 const monday2 = document.querySelector(".lesson-monday-2");
-const monday3 = document.querySelector(".lesson-monday-3");
+const monday3 = document.querySelector(".lesson-monday-4");
 const monday4 = document.querySelector(".lesson-monday-4");
 const monday5 = document.querySelector(".lesson-monday-5");
 
@@ -182,11 +182,6 @@ const friday5 = document.querySelector(".lesson-friday-5");
 
 sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  currentAccount.lessons1.length = 0;
-  currentAccount.lessons2.length = 0;
-  currentAccount.lessons3.length = 0;
-  currentAccount.lessons4.length = 0;
-  currentAccount.lessons5.length = 0;
   currentAccount.lessons1.push(
     monday1.value,
     tuesday1.value,
@@ -255,36 +250,4 @@ const showStudentTiemtable = function () {
   friday3.value = currentAccount.lessons3[2];
   friday4.value = currentAccount.lessons4[3];
   friday5.value = currentAccount.lessons5[4];
-};
-
-const resetTimetableInputs = function () {
-  monday1.value = "";
-  monday2.value = "";
-  monday3.value = "";
-  monday4.value = "";
-  monday5.value = "";
-
-  tuesday1.value = "";
-  tuesday2.value = "";
-  tuesday3.value = "";
-  tuesday4.value = "";
-  tuesday5.value = "";
-
-  wednesday1.value = "";
-  wednesday2.value = "";
-  wednesday3.value = "";
-  wednesday4.value = "";
-  wednesday5.value = "";
-
-  thursday1.value = "";
-  thursday2.value = "";
-  thursday3.value = "";
-  thursday4.value = "";
-  thursday5.value = "";
-
-  friday1.value = "";
-  friday2.value = "";
-  friday3.value = "";
-  friday4.value = "";
-  friday5.value = "";
 };

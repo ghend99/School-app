@@ -19,14 +19,6 @@ const createAccountModalSubmit = function () {
   createAccountRepinInput.value = "";
 };
 
-const createStudentInputReset = function () {
-  createAccountFirstnameInput.value = "";
-  createAccountLastnameInput.value = "";
-  createAccountYearInput.value = "";
-  createAccountPinInput.value = "";
-  createAccountRepinInput.value = "";
-};
-
 const composeMessageOpen = function () {
   composeMessageContainer.style.opacity = "1";
   composeMessageContainer.style.zIndex = "1";

@@ -17,14 +17,11 @@ const createAccountModalSubmit = function () {
   createAccountYearInput.value = "";
   createAccountPinInput.value = "";
   createAccountRepinInput.value = "";
-};
-
-const createStudentInputReset = function () {
-  createAccountFirstnameInput.value = "";
-  createAccountLastnameInput.value = "";
-  createAccountYearInput.value = "";
-  createAccountPinInput.value = "";
-  createAccountRepinInput.value = "";
+  // document.querySelector(".create-account-fullname-error").innerText = ``;
+  // document.querySelector(".create-account-lastname-error").innerText = "";
+  // document.querySelector(".create-account-year-error").innerText = "";
+  // document.querySelector(".create-account-pin-error").innerText = "";
+  // document.querySelector(".create-account-repin-error").innerText = "";
 };
 
 const composeMessageOpen = function () {
@@ -52,7 +49,6 @@ const timetableClose = function () {
   timetableContainer.style.zIndex = "0";
   studentManagmentHeader.textContent = "";
   studentManagementClose.style.opacity = "0";
-  sidebarUpdateTimetable.style.opacity = "0";
 };
 
 const inboxOpen = function () {

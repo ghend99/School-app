@@ -38,10 +38,6 @@ const sidebarShowTimetable = document.querySelector(".show-timetable");
 const sidebarShowInbox = document.querySelector(".show-inbox");
 const sidebarOpenMenu = document.querySelector(".sidebar-open-menu");
 const sidebarCloseMenu = document.querySelector(".sidebar-close-menu");
-const sidebarUpdateTimetable = document.getElementById(
-  "sidebar-link-timetable"
-);
-const sidebarUpdateTimetableBtn = document.querySelector(".update-timetable");
 
 /////////////////// Header ///////////////////
 const headerFullNameInput = document.getElementById("header-login-fullname");
@@ -98,7 +94,7 @@ const composeMessageReciever = document.getElementById(
   "compose-message-input-reciever"
 );
 const composeMessageSubject = document.getElementById(
-  "compose-message-input-subject"
+  "compose-message-subject"
 );
 const composeMessageText = document.querySelector(".compose-message-textarea");
 const composeMessageSubmitButton = document.querySelector(
@@ -111,9 +107,3 @@ const loginModalFullname = document.getElementById("login-input-fullname");
 const loginModalPin = document.getElementById("login-input-pin");
 const loginPinShow = document.querySelector(".login-pin-show");
 const loginSubmit = document.querySelector(".login-button-submit");
-
-/////////////////// Dark Mode ///////////////////
-const darkModeToggleOn = document.querySelector(".header-dark-mode-toggle");
-const darkModeToggleOff = document.querySelector(".header-light-mode-toggle");
-const headerLogo = document.querySelector(".header-logo");
-const createAccountInputs = document.getElementById("create-account-input");

@@ -226,65 +226,37 @@ sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
 });
 
 const showStudentTiemtable = function () {
-  monday1.value = currentAccount.lessons1[0];
-  monday2.value = currentAccount.lessons2[1];
-  monday3.value = currentAccount.lessons3[2];
-  monday4.value = currentAccount.lessons4[3];
-  monday5.value = currentAccount.lessons5[4];
+  if (lessons1.length === 0) {
+    monday1.value = "";
+  } else {
+    monday1.value = currentAccount.lessons1[0];
+    monday2.value = currentAccount.lessons2[1];
+    monday3.value = currentAccount.lessons3[2];
+    monday4.value = currentAccount.lessons4[3];
+    monday5.value = currentAccount.lessons5[4];
 
-  tuesday1.value = currentAccount.lessons1[0];
-  tuesday2.value = currentAccount.lessons2[1];
-  tuesday3.value = currentAccount.lessons3[2];
-  tuesday4.value = currentAccount.lessons4[3];
-  tuesday5.value = currentAccount.lessons5[4];
+    tuesday1.value = currentAccount.lessons1[0];
+    tuesday2.value = currentAccount.lessons2[1];
+    tuesday3.value = currentAccount.lessons3[2];
+    tuesday4.value = currentAccount.lessons4[3];
+    tuesday5.value = currentAccount.lessons5[4];
 
-  wednesday1.value = currentAccount.lessons1[0];
-  wednesday2.value = currentAccount.lessons2[1];
-  wednesday3.value = currentAccount.lessons3[2];
-  wednesday4.value = currentAccount.lessons4[3];
-  wednesday5.value = currentAccount.lessons5[4];
+    wednesday1.value = currentAccount.lessons1[0];
+    wednesday2.value = currentAccount.lessons2[1];
+    wednesday3.value = currentAccount.lessons3[2];
+    wednesday4.value = currentAccount.lessons4[3];
+    wednesday5.value = currentAccount.lessons5[4];
 
-  thursday1.value = currentAccount.lessons1[0];
-  thursday2.value = currentAccount.lessons2[1];
-  thursday3.value = currentAccount.lessons3[2];
-  thursday4.value = currentAccount.lessons4[3];
-  thursday5.value = currentAccount.lessons5[4];
+    thursday1.value = currentAccount.lessons1[0];
+    thursday2.value = currentAccount.lessons2[1];
+    thursday3.value = currentAccount.lessons3[2];
+    thursday4.value = currentAccount.lessons4[3];
+    thursday5.value = currentAccount.lessons5[4];
 
-  friday1.value = currentAccount.lessons1[0];
-  friday2.value = currentAccount.lessons2[1];
-  friday3.value = currentAccount.lessons3[2];
-  friday4.value = currentAccount.lessons4[3];
-  friday5.value = currentAccount.lessons5[4];
-};
-
-const resetTimetableInputs = function () {
-  monday1.value = "";
-  monday2.value = "";
-  monday3.value = "";
-  monday4.value = "";
-  monday5.value = "";
-
-  tuesday1.value = "";
-  tuesday2.value = "";
-  tuesday3.value = "";
-  tuesday4.value = "";
-  tuesday5.value = "";
-
-  wednesday1.value = "";
-  wednesday2.value = "";
-  wednesday3.value = "";
-  wednesday4.value = "";
-  wednesday5.value = "";
-
-  thursday1.value = "";
-  thursday2.value = "";
-  thursday3.value = "";
-  thursday4.value = "";
-  thursday5.value = "";
-
-  friday1.value = "";
-  friday2.value = "";
-  friday3.value = "";
-  friday4.value = "";
-  friday5.value = "";
+    friday1.value = currentAccount.lessons1[0];
+    friday2.value = currentAccount.lessons2[1];
+    friday3.value = currentAccount.lessons3[2];
+    friday4.value = currentAccount.lessons4[3];
+    friday5.value = currentAccount.lessons5[4];
+  }
 };

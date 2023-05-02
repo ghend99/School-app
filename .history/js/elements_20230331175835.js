@@ -95,10 +95,10 @@ const composeMessageModalClose = document.querySelector(
   ".compose-message-close"
 );
 const composeMessageReciever = document.getElementById(
-  "compose-message-input-reciever"
+  "compose-message-reciever"
 );
 const composeMessageSubject = document.getElementById(
-  "compose-message-input-subject"
+  "compose-message-subject"
 );
 const composeMessageText = document.querySelector(".compose-message-textarea");
 const composeMessageSubmitButton = document.querySelector(

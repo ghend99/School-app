@@ -226,6 +226,10 @@ sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
 });
 
 const showStudentTiemtable = function () {
+  if (lessons1.length === 0) {
+    monday1.value = "";
+  }
+
   monday1.value = currentAccount.lessons1[0];
   monday2.value = currentAccount.lessons2[1];
   monday3.value = currentAccount.lessons3[2];
@@ -255,36 +259,4 @@ const showStudentTiemtable = function () {
   friday3.value = currentAccount.lessons3[2];
   friday4.value = currentAccount.lessons4[3];
   friday5.value = currentAccount.lessons5[4];
-};
-
-const resetTimetableInputs = function () {
-  monday1.value = "";
-  monday2.value = "";
-  monday3.value = "";
-  monday4.value = "";
-  monday5.value = "";
-
-  tuesday1.value = "";
-  tuesday2.value = "";
-  tuesday3.value = "";
-  tuesday4.value = "";
-  tuesday5.value = "";
-
-  wednesday1.value = "";
-  wednesday2.value = "";
-  wednesday3.value = "";
-  wednesday4.value = "";
-  wednesday5.value = "";
-
-  thursday1.value = "";
-  thursday2.value = "";
-  thursday3.value = "";
-  thursday4.value = "";
-  thursday5.value = "";
-
-  friday1.value = "";
-  friday2.value = "";
-  friday3.value = "";
-  friday4.value = "";
-  friday5.value = "";
 };

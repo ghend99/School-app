@@ -1,5 +1,6 @@
 headerLogin.addEventListener("click", function (e) {
   e.preventDefault();
+  console.log(`CLICK`);
   login();
 });
 
@@ -81,6 +82,7 @@ loginSubmit.addEventListener("click", function (e) {
 
 sidebarOpenMenu.addEventListener("click", function (e) {
   e.preventDefault();
+  console.log(`CLICK`);
   sidebarContainer.style.display = "flex";
   sidebarContainer.style.opacity = "1";
   sidebarOpenMenu.style.opacity = "0";
@@ -91,6 +93,7 @@ sidebarOpenMenu.addEventListener("click", function (e) {
 
 sidebarCloseMenu.addEventListener("click", function (e) {
   e.preventDefault();
+  console.log(`CLICK`);
   sidebarContainer.style.opacity = "0";
   sidebarOpenMenu.style.opacity = "1";
   sidebarOpenMenu.style.zIndex = "1";

@@ -1,4 +1,4 @@
-let reciever;
+let objReciever;
 let objSender;
 let currentAccount;
 let message;
@@ -9,7 +9,9 @@ const sendMessage = function () {
   message = composeMessageText.value;
   subject = composeMessageSubject.value;
   const messageReciever = composeMessageReciever.value;
-  reciever = students.find((stu) => stu.fullName === `${messageReciever}`);
+  const reciever = students.find(
+    (stu) => stu.fullName === `${messageReciever}`
+  );
   if (reciever.length === 0) {
     alert(`Not a valid user`);
   } else {

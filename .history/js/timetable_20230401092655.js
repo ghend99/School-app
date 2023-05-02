@@ -259,32 +259,4 @@ const showStudentTiemtable = function () {
 
 const resetTimetableInputs = function () {
   monday1.value = "";
-  monday2.value = "";
-  monday3.value = "";
-  monday4.value = "";
-  monday5.value = "";
-
-  tuesday1.value = "";
-  tuesday2.value = "";
-  tuesday3.value = "";
-  tuesday4.value = "";
-  tuesday5.value = "";
-
-  wednesday1.value = "";
-  wednesday2.value = "";
-  wednesday3.value = "";
-  wednesday4.value = "";
-  wednesday5.value = "";
-
-  thursday1.value = "";
-  thursday2.value = "";
-  thursday3.value = "";
-  thursday4.value = "";
-  thursday5.value = "";
-
-  friday1.value = "";
-  friday2.value = "";
-  friday3.value = "";
-  friday4.value = "";
-  friday5.value = "";
 };
