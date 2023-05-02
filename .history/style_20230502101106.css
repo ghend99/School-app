@@ -441,8 +441,7 @@ input {
   font-family: "Roboto", Arial;
 }
 
-#login-input-fullname,
-#login-input-pin {
+.login-input {
   position: absolute;
   margin: 0;
   background-color: transparent;

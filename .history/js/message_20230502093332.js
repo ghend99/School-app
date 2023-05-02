@@ -13,9 +13,7 @@ const sendMessage = function () {
     (stu) => stu.fullName === `${messageReciever}`
   );
   if (reciever === undefined) {
-    alert(`Not a valid message reciever`);
-  } else if (currentAccount === undefined) {
-    alert(`You need to login to send messages`);
+    alert(`Not a valid user`);
   } else {
     reciever.inbox.push(message);
     currentAccount.sent.push(message);

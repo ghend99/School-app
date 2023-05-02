@@ -14,8 +14,6 @@ const sendMessage = function () {
   );
   if (reciever === undefined) {
     alert(`Not a valid message reciever`);
-  } else if (currentAccount === undefined) {
-    alert(`You need to login to send messages`);
   } else {
     reciever.inbox.push(message);
     currentAccount.sent.push(message);
@@ -26,6 +24,10 @@ const sendMessage = function () {
 };
 
 const updateInbox = function () {
+  if (currentAccount.fullName === undefined) {
+    alert(`You need to login to send messages`);
+  }
+
   const html = ` <div id="inbox-line">
   <p>${new Date(Date.now()).toLocaleString()}</p>
   <p>${currentAccount.fullName}</p>

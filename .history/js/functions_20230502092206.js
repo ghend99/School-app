@@ -148,9 +148,7 @@ const showPinLoginModal = function () {
 const addReferal = function () {
   let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarAddReferalInput.value;
-  const target = studentsAccessed.find(
-    (stu) => stu.fullName === `${searchParameter}`
-  );
+  const target = students.find((stu) => stu.fullName === `${searchParameter}`);
   if (target === undefined) {
     alert(`Not a valid user`);
   } else {

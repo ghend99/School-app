@@ -1,6 +1,6 @@
 let students = [];
 let pins = [];
-// let studentsStored = [];
+let studentsStored = [];
 
 const Student = class {
   constructor(
@@ -32,10 +32,10 @@ const Student = class {
 };
 
 const login = function () {
-  let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
+  // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const loginName = headerFullNameInput.value;
   const loginPin = headerPinInput.value;
-  const target = studentsAccessed.find(
+  const target = studentsStored.find(
     (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
   );
   currentAccount = target;
@@ -65,10 +65,10 @@ const login = function () {
 };
 
 const loginModal = function () {
-  let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
+  // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const loginName = loginModalFullname.value;
   const loginPin = loginModalPin.value;
-  const target = studentsAccessed.find(
+  const target = students.find(
     (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
   );
   currentAccount = target;
@@ -100,20 +100,19 @@ const createStudent = function () {
   students.push(newStudent);
 
   pins.push(createAccountPinInput.value);
-  let studentsStored = JSON.stringify(students);
+  studentsStored = JSON.stringify(students);
   localStorage.setItem(`students`, studentsStored);
   console.log(studentsStored);
   createAccountModalSubmit();
 };
 
 const searchStudent = function () {
-  let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
+  // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarStudentSearchInput.value;
-  const searchResult = studentsAccessed.find(
+  const searchResult = students.find(
     (stu) => stu.fullName === `${searchParameter}`
   );
-  console.log(searchResult);
-  if (searchResult === undefined) {
+  if (searchResult.length === 0) {
     alert(`Not a valid user`);
   } else {
     studentInformationHeader.textContent = `Student: ${searchResult.fullName}`;
@@ -146,11 +145,10 @@ const showPinLoginModal = function () {
 };
 
 const addReferal = function () {
-  let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
+  // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarAddReferalInput.value;
-  const target = studentsAccessed.find(
-    (stu) => stu.fullName === `${searchParameter}`
-  );
+  const target = students.find((stu) => stu.fullName === `${searchParameter}`);
+
   if (target === undefined) {
     alert(`Not a valid user`);
   } else {
@@ -174,6 +172,7 @@ const darkModeOn = function () {
     .forEach((el) => el.classList.add("dark-mode-input"));
   loginSubmit.style.backgroundColor = "white";
   loginSubmit.style.color = "black";
+
   createAccountContainer.classList.add("dark-mode");
   createAccountContainer.style.backgroundColor = "black";
   document

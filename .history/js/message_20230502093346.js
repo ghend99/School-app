@@ -14,8 +14,6 @@ const sendMessage = function () {
   );
   if (reciever === undefined) {
     alert(`Not a valid message reciever`);
-  } else if (currentAccount === undefined) {
-    alert(`You need to login to send messages`);
   } else {
     reciever.inbox.push(message);
     currentAccount.sent.push(message);

@@ -33,8 +33,8 @@ const Student = class {
 
 const login = function () {
   let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
-  const loginName = headerFullNameInput.value;
-  const loginPin = headerPinInput.value;
+  const loginName = loginInputFullName.value;
+  const loginPin = loginInputPin.value;
   const target = studentsAccessed.find(
     (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
   );
