@@ -22,6 +22,8 @@ The project came from wanting to put my time studying Javascript into practice w
 ### Loging in
 
 1. Upon creating a new account you enter the "full-name" of the student and the pin corresponding to the account. (the "full-name" is automaticlly created using the join() string method).
+2. If an account has been created previous then you can log directly into that account without the need of having to create a new one.
+3. (The reason for choosing localStorage over sessionStorage is that it made testing more effiecient, but it also mimics what it would be like to log into an account through a database.)
 
 ### Searching a student
 
@@ -39,6 +41,7 @@ The project came from wanting to put my time studying Javascript into practice w
 2. Enter the "full-name" of the student you want to message.
 3. Provide a brief subject of the message (this will appear on the message output).
 4. Write out the message and click the submit button.
+5. You must be logged into an account to send a message and the reciever must exist in the localstorage.
 
 ### Providing a timetable
 
@@ -80,6 +83,7 @@ As one of my first projects I greatly enjoyed discovering problems and then unde
 3. Input a schedule for the student (WIP).
 4. Inbox system for communication.
 5. Error messages when creating an account/logging in.
+6. Storing created account inside the localstorage.
 
 ## Future Features
 
