@@ -149,6 +149,7 @@ const addReferal = function () {
   // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarAddReferalInput.value;
   const target = students.find((stu) => stu.fullName === `${searchParameter}`);
+
   if (target === undefined) {
     alert(`Not a valid user`);
   } else {
@@ -172,6 +173,7 @@ const darkModeOn = function () {
     .forEach((el) => el.classList.add("dark-mode-input"));
   loginSubmit.style.backgroundColor = "white";
   loginSubmit.style.color = "black";
+
   createAccountContainer.classList.add("dark-mode");
   createAccountContainer.style.backgroundColor = "black";
   document
