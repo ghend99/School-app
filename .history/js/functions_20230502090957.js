@@ -107,7 +107,7 @@ const createStudent = function () {
 };
 
 const searchStudent = function () {
-  let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
+  // let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarStudentSearchInput.value;
   const searchResult = studentsAccessed.find(
     (stu) => stu.fullName === `${searchParameter}`
