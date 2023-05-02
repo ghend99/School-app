@@ -118,5 +118,5 @@ const darkModeToggleOff = document.querySelector(".header-light-mode-toggle");
 const headerLogo = document.querySelector(".header-logo");
 const createAccountInputs = document.getElementById("create-account-input");
 
-const loginInputFullName = document.querySelector(".login-input-fullname");
+const loginInputFullName = document.querySelector(".login-input-full");
 const loginInputPin = document.querySelector(".login-input-pin");
