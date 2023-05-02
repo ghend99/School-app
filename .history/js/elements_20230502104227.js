@@ -107,8 +107,8 @@ const composeMessageSubmitButton = document.querySelector(
 
 /////////////////// Login ///////////////////
 const headerLoginClose = document.querySelector(".login-close");
-const loginModalFullname = document.getElementById("login-input-fullname");
-const loginModalPin = document.getElementById("login-input-pin");
+// const loginModalFullname = document.getElementById("login-input-fullname");
+// const loginModalPin = document.getElementById("login-input-pin");
 const loginPinShow = document.querySelector(".login-pin-show");
 const loginSubmit = document.querySelector(".login-button-submit");
 
@@ -117,3 +117,6 @@ const darkModeToggleOn = document.querySelector(".header-dark-mode-toggle");
 const darkModeToggleOff = document.querySelector(".header-light-mode-toggle");
 const headerLogo = document.querySelector(".header-logo");
 const createAccountInputs = document.getElementById("create-account-input");
+
+const loginInputFullName = document.querySelector(".login-input-fullname");
+const loginInputPin = document.querySelector(".login-input-pin");
