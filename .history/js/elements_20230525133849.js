@@ -125,4 +125,4 @@ const headerLogo = document.querySelector(".header-logo");
 const createAccountInputs = document.getElementById("create-account-input");
 
 /////////////////// Password Reset ///////////////////
-const btnPasswordResetClose = document.querySelector(".password-reset-close");
+const passwordResetClose = document.querySelector(".password-reset-close");

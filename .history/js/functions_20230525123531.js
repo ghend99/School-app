@@ -181,7 +181,6 @@ const passwordReset = function () {
   document.querySelector(
     ".password-reset-name"
   ).textContent = `${target.fullName}`;
-  console.log(target.pin);
 };
 
 const darkModeOn = function () {

@@ -175,14 +175,12 @@ const addReferal = function () {
 };
 
 const passwordReset = function () {
-  const target = students.find(
-    (stu) => stu.fullName === `${currentAccount.fullName}`
-  );
   document.querySelector(
     ".password-reset-name"
-  ).textContent = `${target.fullName}`;
-  console.log(target.pin);
+  ).textContent = `Account = ${currentAccount.fullName}`;
 };
+
+passwordReset();
 
 const darkModeOn = function () {
   mainContainer.classList.add("dark-mode");

@@ -669,11 +669,11 @@ input {
 
 #password-reset-container {
   position: relative;
-  display: none;
+  display: block;
   top: -1635px;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 20%;
+  max-width: 30%;
   min-width: 200px;
   max-height: 300px;
   min-height: 250px;
@@ -687,15 +687,15 @@ input {
   width: 8%;
   right: 0;
   top: 0;
-  cursor: pointer;
 }
 
 .password-reset-name {
   position: absolute;
+  left: 0;
   margin: 0;
   top: 40px;
-  margin-left: 10px;
-  font-size: 14px;
+  margin-left: 30px;
+  font-size: 20px;
 }
 
 .password-reset-header {
@@ -733,18 +733,12 @@ input {
 .password-reset-newpin-input {
   position: absolute;
   margin-left: 30px;
-  top: 160px;
+  top: 140px;
   background-color: transparent;
   text-decoration: none;
   border: none;
   border-bottom: solid;
   outline: none;
-}
-
-.password-reset-submit {
-  position: absolute;
-  bottom: 30px;
-  margin-left: 30px;
 }
 
 @media screen and (min-width: 0) and (max-width: 1200px) {

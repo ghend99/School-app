@@ -669,7 +669,7 @@ input {
 
 #password-reset-container {
   position: relative;
-  display: none;
+  display: block;
   top: -1635px;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -687,15 +687,14 @@ input {
   width: 8%;
   right: 0;
   top: 0;
-  cursor: pointer;
 }
 
 .password-reset-name {
   position: absolute;
   margin: 0;
   top: 40px;
-  margin-left: 10px;
-  font-size: 14px;
+  margin-left: 30px;
+  font-size: 20px;
 }
 
 .password-reset-header {

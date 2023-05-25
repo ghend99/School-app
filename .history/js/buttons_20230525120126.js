@@ -124,13 +124,4 @@ darkModeToggleOff.addEventListener("click", function (e) {
   darkModeOff();
 });
 
-studentInformationPasswordReset.addEventListener("click", function (e) {
-  e.preventDefault();
-  passwordResetOpen();
-  passwordReset();
-});
-
-btnPasswordResetClose.addEventListener("click", function (e) {
-  e.preventDefault();
-  passwordResetClose();
-});
+studen

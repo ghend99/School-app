@@ -123,6 +123,3 @@ const darkModeToggleOn = document.querySelector(".header-dark-mode-toggle");
 const darkModeToggleOff = document.querySelector(".header-light-mode-toggle");
 const headerLogo = document.querySelector(".header-logo");
 const createAccountInputs = document.getElementById("create-account-input");
-
-/////////////////// Password Reset ///////////////////
-const btnPasswordResetClose = document.querySelector(".password-reset-close");

@@ -85,8 +85,3 @@ const passwordResetOpen = function () {
   passwordResetContianer.style.display = "block";
   mainContainer.style.filter = "blur(3px)";
 };
-
-const passwordResetClose = function () {
-  passwordResetContianer.style.display = "none";
-  mainContainer.style.filter = "blur(0px)";
-};
