@@ -207,9 +207,6 @@ const darkModeOn = function () {
   createAccountContainer.classList.add("dark-mode");
   createAccountContainer.style.backgroundColor = "black";
   passwordResetContianer.classList.add("dark-mode");
-  passwordResetContianer.style.backgroundColor = "black";
-  resetPasswordNewPinInput.classList.add("dark-mode-input");
-  resetPasswordPinInput.classList.add("dark-mode-input");
   document
     .querySelectorAll(".create-account-input")
     .forEach((el) => el.classList.add("dark-mode-input"));
@@ -230,7 +227,6 @@ const darkModeOn = function () {
   createAccountModalClose.src = "images/close-white.png";
   composeMessageModalClose.src = "images/close-white.png";
   studentManagementClose.src = "images/close-white.png";
-  btnPasswordResetClose.src = "images/close-white.png";
 };
 
 const darkModeOff = function () {
@@ -249,7 +245,6 @@ const darkModeOff = function () {
   loginSubmit.style.color = "white";
   createAccountContainer.classList.remove("dark-mode");
   createAccountContainer.style.backgroundColor = "#faf9f6";
-  passwordResetContianer.classList.remove("dark-mode");
   passwordResetContianer.style.backgroundColor = "#faf9f6";
   document
     .querySelectorAll(".create-account-input")
@@ -271,5 +266,4 @@ const darkModeOff = function () {
   createAccountModalClose.src = "images/Close.png";
   composeMessageModalClose.src = "images/Close.png";
   studentManagementClose.src = "images/close.png";
-  btnPasswordResetClose.src = "images/Close.png";
 };

@@ -169,13 +169,12 @@ input {
 
 #sidebar-container {
   position: absolute;
-  display: block;
   max-width: 30%;
   min-width: 20%;
   height: 85%;
   right: 0;
   flex-direction: column;
-  /* opacity: 1; */
+  opacity: 1;
   /* background-color: lightcoral; */
   /* border-left: solid; */
 }
@@ -782,7 +781,7 @@ input {
   }
 
   #sidebar-container {
-    display: none;
+    opacity: 0;
   }
 
   .sidebar-open-menu {
@@ -873,13 +872,12 @@ input {
   }
 
   .header-dark-mode-toggle {
-    top: 40px;
-    width: 15%;
+    top: 50px;
   }
 
   .header-light-mode-toggle {
-    width: 15%;
-    top: 40px;
+    width: 10%;
+    top: 50px;
   }
 }
 

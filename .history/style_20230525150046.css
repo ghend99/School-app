@@ -169,13 +169,12 @@ input {
 
 #sidebar-container {
   position: absolute;
-  display: block;
   max-width: 30%;
   min-width: 20%;
   height: 85%;
   right: 0;
   flex-direction: column;
-  /* opacity: 1; */
+  opacity: 1;
   /* background-color: lightcoral; */
   /* border-left: solid; */
 }
@@ -778,11 +777,11 @@ input {
     display: flex;
     right: 5px;
     width: 50px;
-    top: 65%;
+    top: 50%;
   }
 
   #sidebar-container {
-    display: none;
+    opacity: 0;
   }
 
   .sidebar-open-menu {
@@ -870,16 +869,6 @@ input {
 
   #compose-message-container {
     left: 205px;
-  }
-
-  .header-dark-mode-toggle {
-    top: 40px;
-    width: 15%;
-  }
-
-  .header-light-mode-toggle {
-    width: 15%;
-    top: 40px;
   }
 }
 
