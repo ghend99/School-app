@@ -777,7 +777,7 @@ input {
   }
 
   #compose-message-container {
-    top: -1150px;
+    top: 0;
     left: 200px;
   }
 }
@@ -799,7 +799,7 @@ input {
   }
 
   #compose-message-container {
-    left: 180px;
+    left: 200px;
   }
 }
 
@@ -819,7 +819,6 @@ input {
   }
 
   #compose-message-container {
-    left: 150px;
-    min-width: 300px;
+    left: 200px;
   }
 }
