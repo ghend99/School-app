@@ -869,6 +869,7 @@ input {
   }
 
   #compose-message-container {
+    /* top: -1150px; */
     left: 205px;
   }
 }
@@ -906,7 +907,7 @@ input {
   }
 
   #create-account-container {
-    left: 150px;
+    left: 200px;
   }
 
   #compose-message-container {
