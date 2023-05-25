@@ -75,7 +75,7 @@ const loginModalOpen = function () {
 
 const loginModalClose = function () {
   loginContainer.style.opacity = "0";
-  loginContainer.style.display = "none";
+  loginContainer.style.zIndex = "0";
   mainContainer.style.filter = "blur(0px)";
 };
 

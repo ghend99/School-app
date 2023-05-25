@@ -409,7 +409,7 @@ input {
 
 #login-container {
   position: absolute;
-  display: none;
+  display: flex;
   top: 435px;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -418,7 +418,7 @@ input {
   max-height: 45vh;
   min-height: 400px;
   opacity: 0;
-
+  z-index: 0;
   border: solid;
   border-radius: 5px;
   background-color: #faf9f6;

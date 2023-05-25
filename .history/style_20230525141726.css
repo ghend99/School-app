@@ -410,7 +410,7 @@ input {
 #login-container {
   position: absolute;
   display: none;
-  top: 435px;
+  /* top: 435px; */
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 100%;

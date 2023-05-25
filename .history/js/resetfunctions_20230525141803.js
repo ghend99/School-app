@@ -54,28 +54,26 @@ const timetableClose = function () {
 };
 
 const inboxOpen = function () {
-  inboxContainer.style.opacity = "1";
-  inboxContainer.style.zIndex = "1";
+  inboxContainer.style.display = "block";
   studentManagmentHeader.textContent = "Inbox";
   studentManagementClose.style.opacity = "1";
 };
 
 const inboxClose = function () {
-  inboxContainer.style.opacity = "0";
-  inboxContainer.style.zIndex = "0";
+  inboxContainer.style.display = "none";
   studentManagmentHeader.textContent = "";
   studentManagementClose.style.opacity = "0";
 };
 
 const loginModalOpen = function () {
   loginContainer.style.opacity = "1";
-  loginContainer.style.display = "block";
+  loginContainer.style.zIndex = "1";
   mainContainer.style.filter = "blur(3px)";
 };
 
 const loginModalClose = function () {
   loginContainer.style.opacity = "0";
-  loginContainer.style.display = "none";
+  loginContainer.style.zIndex = "0";
   mainContainer.style.filter = "blur(0px)";
 };
 
