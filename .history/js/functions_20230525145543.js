@@ -230,7 +230,6 @@ const darkModeOn = function () {
   createAccountModalClose.src = "images/close-white.png";
   composeMessageModalClose.src = "images/close-white.png";
   studentManagementClose.src = "images/close-white.png";
-  btnPasswordResetClose.src = "images/close-white.png";
 };
 
 const darkModeOff = function () {
@@ -271,5 +270,4 @@ const darkModeOff = function () {
   createAccountModalClose.src = "images/Close.png";
   composeMessageModalClose.src = "images/Close.png";
   studentManagementClose.src = "images/close.png";
-  btnPasswordResetClose.src = "images/Close.png";
 };

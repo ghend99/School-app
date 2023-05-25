@@ -782,7 +782,7 @@ input {
   }
 
   #sidebar-container {
-    display: none;
+    opacity: 0;
   }
 
   .sidebar-open-menu {
@@ -873,13 +873,13 @@ input {
   }
 
   .header-dark-mode-toggle {
-    top: 40px;
+    top: 50px;
     width: 15%;
   }
 
   .header-light-mode-toggle {
     width: 15%;
-    top: 40px;
+    top: 50px;
   }
 }
 
