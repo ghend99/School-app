@@ -33,8 +33,8 @@ const Student = class {
 
 const login = function () {
   let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
-  const loginName = headerFullNameInput.value;
-  const loginPin = headerPinInput.value;
+  const loginName = loginInputFullName.value;
+  const loginPin = loginInputPin.value;
   const target = studentsAccessed.find(
     (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
   );
@@ -44,7 +44,6 @@ const login = function () {
   } else {
     headerFullNameInput.value = "";
     headerPinInput.value = "";
-
     studentInformationHeader.textContent = `Student Name: ${currentAccount.fullName}`;
     studentInformationFirstname.textContent = `First Name: ${currentAccount.firstName}`;
     studetnInformationLastname.textContent = `Last Name: ${currentAccount.lastName}`;
@@ -53,9 +52,7 @@ const login = function () {
       currentAccount.referals < 0
         ? "Referals: 0"
         : `Referals: ${currentAccount.referals}`;
-
     mainContainer.style.opacity = "1";
-
     if (currentAccount.lessons1.length > 1) {
       showStudentTiemtable();
     } else {
@@ -64,30 +61,30 @@ const login = function () {
   }
 };
 
-const loginModal = function () {
-  let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
-  const loginName = loginModalFullname.value;
-  const loginPin = loginModalPin.value;
-  const target = studentsAccessed.find(
-    (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
-  );
-  currentAccount = target;
-  if (target === undefined) {
-    alert("Incorrect login credentials");
-  } else {
-    headerFullNameInput.value = "";
-    headerPinInput.value = "";
-    studentInformationHeader.textContent = `Student Name: ${currentAccount.fullName}`;
-    studentInformationFirstname.textContent = `First Name: ${currentAccount.firstName}`;
-    studetnInformationLastname.textContent = `Last Name: ${currentAccount.lastName}`;
-    studentInformationYear.textContent = `Year Group: ${currentAccount.year}`;
-    studentInformationReferals.textContent =
-      currentAccount.referals < 0
-        ? "Referals: 0"
-        : `Referals: ${currentAccount.referals}`;
-    mainContainer.style.opacity = "1";
-  }
-};
+// const loginModal = function () {
+//   let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
+//   const loginName = loginModalFullname.value;
+//   const loginPin = loginModalPin.value;
+//   const target = studentsAccessed.find(
+//     (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
+//   );
+//   currentAccount = target;
+//   if (target === undefined) {
+//     alert("Incorrect login credentials");
+//   } else {
+//     headerFullNameInput.value = "";
+//     headerPinInput.value = "";
+//     studentInformationHeader.textContent = `Student Name: ${currentAccount.fullName}`;
+//     studentInformationFirstname.textContent = `First Name: ${currentAccount.firstName}`;
+//     studetnInformationLastname.textContent = `Last Name: ${currentAccount.lastName}`;
+//     studentInformationYear.textContent = `Year Group: ${currentAccount.year}`;
+//     studentInformationReferals.textContent =
+//       currentAccount.referals < 0
+//         ? "Referals: 0"
+//         : `Referals: ${currentAccount.referals}`;
+//     mainContainer.style.opacity = "1";
+//   }
+// };
 
 const createStudent = function () {
   let newStudent = new Student(
