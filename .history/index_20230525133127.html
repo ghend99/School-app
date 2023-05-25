@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Application</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main-container">
+      <!-- Header -->
+      <div id="header-container">
+        <p class="header-school-name">British School of Advancement</p>
+        <p class="header-school-slogan">Where the future starts</p>
+        <img
+          id="header-socials"
+          class="header-linkedin"
+          src="images/LinkedIn.png"
+        />
+        <img
+          id="header-socials"
+          class="header-facebook"
+          src="images/Facebook.png"
+        />
+        <img
+          id="header-socials"
+          class="header-twitter"
+          src="images/Twitter.png"
+        />
+        <img class="header-logo" src="images/logo.png" />
+        <input
+          id="header-login-fullname"
+          class="header-login-input"
+          type="text"
+          placeholder="Fullname..."
+        />
+        <input
+          id="header-login-pin"
+          class="header-login-input"
+          type="password"
+          placeholder="Pin..."
+        />
+        <p class="header-show-pin">Show Pin</p>
+        <img class="header-login-button" src="images/login-button.png" />
+        <img class="header-login-icon" src="images/login.png" />
+        <img class="header-dark-mode-toggle" src="images/dark-mode.png" />
+        <img class="header-light-mode-toggle" src="images/light-mode.png" />
+      </div>
+
+      <!-- Sidebar -->
+      <div id="sidebar-container">
+        <div id="sidebar-link">
+          <p class="sidebar-link-header">Search Student</p>
+          <input class="sidebar-link-search" placeholder="Student Name..." />
+          <button id="sidebar-link-button" class="search-student-button">
+            Search
+          </button>
+        </div>
+        <div id="sidebar-link">
+          <p class="sidebar-link-header">Add Student</p>
+          <button id="sidebar-link-button" class="create-account-button">
+            Add
+          </button>
+        </div>
+        <div id="sidebar-link">
+          <p class="sidebar-link-header">Send Message</p>
+          <button id="sidebar-link-button" class="compose-message-button">
+            Compose
+          </button>
+        </div>
+        <div id="sidebar-link">
+          <p class="sidebar-link-header">Add Referal</p>
+          <input
+            class="sidebar-add-referal-input sidebar-link-search"
+            placeholder="Fullname..."
+          />
+          <button id="sidebar-link-button" class="add-referal">Add</button>
+        </div>
+        <div id="sidebar-link">
+          <p class="sidebar-link-header">Show Timetable</p>
+          <button id="sidebar-link-button" class="show-timetable">Show</button>
+        </div>
+        <div id="sidebar-link">
+          <p class="sidebar-link-header">Show Inbox</p>
+          <button id="sidebar-link-button" class="show-inbox">Show</button>
+        </div>
+        <div id="sidebar-link-timetable">
+          <p class="sidebar-link-header">Update Timetable</p>
+          <button id="sidebar-link-button" class="update-timetable">
+            Show
+          </button>
+        </div>
+      </div>
+
+      <img class="sidebar-open-menu" src="images/menu.png" />
+      <img class="sidebar-close-menu" src="images/menu.png" />
+
+      <!-- Student Information Container -->
+      <div id="student-information-container">
+        <h1 class="student-information-header">Student Name:</h1>
+        <h3 class="student-information-general-header">General Information:</h3>
+        <p id="student-information" class="student-information-firstname">
+          First Name -
+        </p>
+        <p id="student-information" class="student-information-lastname">
+          Last Name -
+        </p>
+        <p id="student-information" class="student-information-year">Year -</p>
+        <p id="student-information" class="student-information-referals">
+          Referals -
+        </p>
+        <p id="student-information" class="student-information-password-reset">
+          Password Reset
+        </p>
+      </div>
+
+      <!-- Student Management Container -->
+      <div id="student-management-container">
+        <h1 class="student-management-heading"></h1>
+        <img class="student-management-close" src="images/Close.png" />
+        <div id="timetable-container"></div>
+        <div id="inbox-container">
+          <div id="inbox-header">
+            <p>Date</p>
+            <p>Sender</p>
+            <p>Reciever</p>
+            <p>Subject</p>
+            <p>Message</p>
+          </div>
+          <div id="inbox-line">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Container -->
+    <div id="login-container">
+      <img class="login-close" src="images/Close.png" />
+      <h3 class="login-header">Login</h3>
+      <input
+        id="login-input-fullname"
+        class="login-input"
+        type="text"
+        placeholder="First Name..."
+      />
+      <input
+        id="login-input-pin"
+        class="login-input"
+        type="password"
+        placeholder="Pin..."
+      />
+      <p class="login-pin-show">Show</p>
+      <button class="login-button-submit">Log In</button>
+    </div>
+
+    <div id="create-account-container">
+      <img class="create-account-close" src="images/Close.png" />
+      <p class="create-account-header">Create Account</p>
+      <input
+        id="create-account-fullname"
+        class="create-account-input"
+        type="text"
+        placeholder="Fullname..."
+      />
+      <p id="create-account-error" class="create-account-fullname-error"></p>
+
+      <input
+        id="create-account-lastname"
+        class="create-account-input"
+        type="text"
+        placeholder="Lastname..."
+      />
+      <p id="create-account-error" class="create-account-lastname-error"></p>
+      <input
+        id="create-account-year"
+        class="create-account-input"
+        type="number"
+        placeholder="Year..."
+      />
+      <p id="create-account-error" class="create-account-year-error"></p>
+      <input
+        id="create-account-pin"
+        class="create-account-input"
+        type="number"
+        placeholder="Pin..."
+      />
+      <p id="create-account-error" class="create-account-pin-error"></p>
+      <input
+        id="create-account-repin"
+        class="create-account-input"
+        type="number"
+        placeholder="Pin..."
+      />
+      <p id="create-account-error" class="create-account-repin-error"></p>
+      <button class="create-account-submit">Create</button>
+    </div>
+
+    <!-- Compose Message Container -->
+    <div id="compose-message-container">
+      <p class="compose-message-header">Compose Message</p>
+      <img class="compose-message-close" src="images/Close.png" />
+      <input
+        id="compose-message-input-reciever"
+        class="compose-message-input"
+        type="text"
+        placeholder="To..."
+      />
+      <input
+        id="compose-message-input-subject"
+        class="compose-message-input"
+        type="text"
+        placeholder="Subject..."
+      />
+      <textarea
+        class="compose-message-textarea"
+        placeholder="Message..."
+      ></textarea>
+      <button class="compose-message-send">Send</button>
+    </div>
+
+    <!-- Password reset Container -->
+    <div id="password-reset-container">
+      <img class="password-reset-close" src="./images/Close.png" />
+      <p class="password-reset-header">Password Reset</p>
+      <p class="password-reset-name">Greg Piercer</p>
+      <p class="password-reset-pin-header">Old Pin</p>
+      <input
+        class="password-reset-pin-input"
+        type="number"
+        placeholder="Pin..."
+      />
+      <p class="password-reset-newpin-header">New Pin</p>
+      <input
+        class="password-reset-newpin-input"
+        type="number"
+        placeholder="New pin..."
+      />
+      <button class="password-reset-submit" type="submit">Change</button>
+    </div>
+
+    <script src="./js/functions.js"></script>
+    <script src="./js/elements.js"></script>
+    <script src="./js/buttons.js"></script>
+    <script src="./js/message.js"></script>
+    <script src="./js/resetfunctions.js"></script>
+
+    <script src="./js/timetable.js"></script>
+  </body>
+</html>
