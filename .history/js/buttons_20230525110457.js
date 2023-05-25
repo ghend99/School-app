@@ -100,7 +100,7 @@ sidebarCloseMenu.addEventListener("click", function (e) {
 
 composeMessageSubmitButton.addEventListener("click", function (e) {
   e.preventDefault();
-  sendMessage();
+  setTimeout(sendMessage, updateInbox, timetableClose, inboxOpen, 3000);
   updateInbox();
   timetableClose();
   inboxOpen();

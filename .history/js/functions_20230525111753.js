@@ -106,7 +106,6 @@ const createStudent = function () {
     (createAccountYearInput.value > 13) |
     (createAccountYearInput.value < 4)
   ) {
-    alert(`Year group range is 4-13`);
   } else {
     students.push(newStudent);
     pins.push(createAccountPinInput.value);

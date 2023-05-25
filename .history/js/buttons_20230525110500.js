@@ -100,10 +100,10 @@ sidebarCloseMenu.addEventListener("click", function (e) {
 
 composeMessageSubmitButton.addEventListener("click", function (e) {
   e.preventDefault();
-  sendMessage();
-  updateInbox();
-  timetableClose();
-  inboxOpen();
+  setTimeout(sendMessage, updateInbox, timetableClose, inboxOpen, 3000);
+  // updateInbox();
+  // timetableClose();
+  // inboxOpen();
   mainContainer.style.filter = "blur(0px)";
   composeMessageContainer.style.opacity = "0";
   composeMessageContainer.style.zIndex = "0";

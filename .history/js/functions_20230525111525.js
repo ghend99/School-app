@@ -99,14 +99,10 @@ const createStudent = function () {
     createAccountPinInput.value,
     createAccountRepinInput.value
   );
+
   if (createAccountPinInput.value !== createAccountRepinInput.value) {
     alert(`Pins do not match`);
     return;
-  } else if (
-    (createAccountYearInput.value > 13) |
-    (createAccountYearInput.value < 4)
-  ) {
-    alert(`Year group range is 4-13`);
   } else {
     students.push(newStudent);
     pins.push(createAccountPinInput.value);
