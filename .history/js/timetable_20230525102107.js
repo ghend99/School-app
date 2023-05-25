@@ -183,7 +183,7 @@ const friday5 = document.querySelector(".lesson-friday-5");
 sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
   e.preventDefault();
   let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
-  const target = students.find(
+  const target = studentsAccessed.find(
     (stu) =>
       stu.fullName === `${currentAccount.fullName}` &&
       stu.pin === `${currentAccount.pin}`

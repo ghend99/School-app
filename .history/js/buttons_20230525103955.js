@@ -100,7 +100,7 @@ sidebarCloseMenu.addEventListener("click", function (e) {
 
 composeMessageSubmitButton.addEventListener("click", function (e) {
   e.preventDefault();
-  setTimeout(sendMessage, 3000);
+  setTimeout(send, 3000);
   updateInbox();
   timetableClose();
   inboxOpen();
@@ -111,7 +111,7 @@ composeMessageSubmitButton.addEventListener("click", function (e) {
 
 sidebarAddReferal.addEventListener("click", function (e) {
   e.preventDefault();
-  setTimeout(addReferal, 3000);
+  addReferal();
 });
 
 darkModeToggleOn.addEventListener("click", function (e) {

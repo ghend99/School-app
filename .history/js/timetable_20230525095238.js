@@ -183,47 +183,48 @@ const friday5 = document.querySelector(".lesson-friday-5");
 sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
   e.preventDefault();
   let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
-  const target = students.find(
+  const target = studentsAccessed.find(
     (stu) =>
       stu.fullName === `${currentAccount.fullName}` &&
       stu.pin === `${currentAccount.pin}`
   );
+  currentAccount = target;
   console.log(studentsAccessed);
-  console.log(target);
-  target.lessons1.length = 0;
-  target.lessons2.length = 0;
-  target.lessons3.length = 0;
-  target.lessons4.length = 0;
-  target.lessons5.length = 0;
-  target.lessons1.push(
+  console.log(currentAccount);
+  currentAccount.lessons1.length = 0;
+  currentAccount.lessons2.length = 0;
+  currentAccount.lessons3.length = 0;
+  currentAccount.lessons4.length = 0;
+  currentAccount.lessons5.length = 0;
+  currentAccount.lessons1.push(
     monday1.value,
     tuesday1.value,
     wednesday1.value,
     thursday1.value,
     friday1.value
   );
-  target.lessons2.push(
+  currentAccount.lessons2.push(
     monday2.value,
     tuesday2.value,
     wednesday2.value,
     thursday2.value,
     friday2.value
   );
-  target.lessons3.push(
+  currentAccount.lessons3.push(
     monday3.value,
     tuesday3.value,
     wednesday3.value,
     thursday3.value,
     friday3.value
   );
-  target.lessons4.push(
+  currentAccount.lessons4.push(
     monday4.value,
     tuesday4.value,
     wednesday4.value,
     thursday4.value,
     friday4.value
   );
-  target.lessons5.push(
+  currentAccount.lessons5.push(
     monday5.value,
     tuesday5.value,
     wednesday5.value,

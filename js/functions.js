@@ -1,5 +1,6 @@
 let students = [];
 let pins = [];
+let studentsAccessed;
 // let studentsStored = [];
 
 const Student = class {
@@ -32,12 +33,13 @@ const Student = class {
 };
 
 const login = function () {
-  let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
+  studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const loginName = headerFullNameInput.value;
   const loginPin = headerPinInput.value;
-  const target = studentsAccessed.find(
+  const target = students.find(
     (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
   );
+  console.log(studentsAccessed);
   currentAccount = target;
   if (target === undefined) {
     alert("Incorrect login credentials");
@@ -65,10 +67,10 @@ const login = function () {
 };
 
 const loginModal = function () {
-  let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
+  studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const loginName = loginModalFullname.value;
   const loginPin = loginModalPin.value;
-  const target = studentsAccessed.find(
+  const target = students.find(
     (stu) => stu.fullName === `${loginName}` && stu.pin === `${loginPin}`
   );
   currentAccount = target;
@@ -100,16 +102,13 @@ const createStudent = function () {
   students.push(newStudent);
 
   pins.push(createAccountPinInput.value);
-  let studentsStored = JSON.stringify(students);
-  localStorage.setItem(`students`, studentsStored);
-  console.log(studentsStored);
   createAccountModalSubmit();
 };
 
 const searchStudent = function () {
-  let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
+  studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarStudentSearchInput.value;
-  const searchResult = studentsAccessed.find(
+  const searchResult = students.find(
     (stu) => stu.fullName === `${searchParameter}`
   );
   console.log(searchResult);
@@ -146,11 +145,9 @@ const showPinLoginModal = function () {
 };
 
 const addReferal = function () {
-  let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
+  studentsAccessed = JSON.parse(localStorage.getItem(`students`));
   const searchParameter = sidebarAddReferalInput.value;
-  const target = studentsAccessed.find(
-    (stu) => stu.fullName === `${searchParameter}`
-  );
+  const target = students.find((stu) => stu.fullName === `${searchParameter}`);
   if (target === undefined) {
     alert(`Not a valid user`);
   } else {

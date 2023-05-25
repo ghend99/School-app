@@ -9,7 +9,9 @@ const sendMessage = function () {
   message = composeMessageText.value;
   subject = composeMessageSubject.value;
   const messageReciever = composeMessageReciever.value;
-  reciever = students.find((stu) => stu.fullName === `${messageReciever}`);
+  reciever = studentsAccessed.find(
+    (stu) => stu.fullName === `${messageReciever}`
+  );
   if (reciever === undefined) {
     alert(`Not a valid message reciever`);
   } else if (currentAccount === undefined) {

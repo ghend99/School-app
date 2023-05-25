@@ -111,7 +111,7 @@ composeMessageSubmitButton.addEventListener("click", function (e) {
 
 sidebarAddReferal.addEventListener("click", function (e) {
   e.preventDefault();
-  setTimeout(addReferal, 3000);
+  addReferal();
 });
 
 darkModeToggleOn.addEventListener("click", function (e) {
