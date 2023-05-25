@@ -227,11 +227,7 @@ sidebarUpdateTimetableBtn.addEventListener("click", function (e) {
 
 const showStudentTiemtable = function () {
   let studentsAccessed = JSON.parse(localStorage.getItem(`students`));
-  const target = studentsAccessed.find(
-    (stu) =>
-      stu.fullName === `${currentAccount.fullName}` && stu.pin === `${loginPin}`
-  );
-  monday1.value = target.lessons1[0];
+  monday1.value = currentAccount.lessons1[0];
   monday2.value = currentAccount.lessons2[1];
   monday3.value = currentAccount.lessons3[2];
   monday4.value = currentAccount.lessons4[3];

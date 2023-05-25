@@ -774,7 +774,7 @@ input {
 
 @media screen and (min-width: 0) and (max-width: 377px) {
   #main-container {
-    min-width: 350px;
+    min-width: 330px;
   }
 
   #login-container {
@@ -790,11 +790,7 @@ input {
   }
 }
 
-@media screen and (min-width: 0) and (max-width: 322px) {
-  #main-container {
-    min-width: 300px;
-  }
-
+@media screen and (min-width: 0) and (max-width: 320px) {
   #login-container {
     left: 200px;
   }

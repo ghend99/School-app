@@ -8,7 +8,7 @@ button {
 }
 
 body {
-  height: 1010px;
+  height: 1200px;
 }
 
 input {
@@ -746,10 +746,10 @@ input {
   }
 }
 
-@media screen and (min-width: 0) and (max-width: 427px) {
+@media screen and (min-width: 0) and (max-width: 425px) {
   #main-container {
     top: 0;
-    min-width: 380px;
+    min-width: 310px;
   }
 
   #sidebar-link {
@@ -772,11 +772,7 @@ input {
   }
 }
 
-@media screen and (min-width: 0) and (max-width: 377px) {
-  #main-container {
-    min-width: 350px;
-  }
-
+@media screen and (min-width: 0) and (max-width: 375px) {
   #login-container {
     left: 200px;
   }
@@ -790,11 +786,7 @@ input {
   }
 }
 
-@media screen and (min-width: 0) and (max-width: 322px) {
-  #main-container {
-    min-width: 300px;
-  }
-
+@media screen and (min-width: 0) and (max-width: 320px) {
   #login-container {
     left: 200px;
   }
