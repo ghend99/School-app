@@ -443,7 +443,6 @@ input {
 .login-header {
   position: absolute;
   top: 10%;
-  margin-left: 130px;
   font-size: 32px;
   font-family: "Roboto", Arial;
 }
@@ -595,7 +594,7 @@ input {
 #compose-message-container {
   position: relative;
   display: none;
-  top: -600px;
+  top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 16%;
