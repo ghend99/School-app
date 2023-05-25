@@ -713,13 +713,13 @@ input {
 
 .password-reset-pin-header {
   position: absolute;
-  margin-left: 20px;
+  margin-left: 30px;
   top: 60px;
 }
 
 .password-reset-pin-input {
   position: absolute;
-  margin-left: 20px;
+  margin-left: 30px;
   top: 100px;
   background-color: transparent;
   text-decoration: none;
@@ -730,13 +730,13 @@ input {
 
 .password-reset-newpin-header {
   position: absolute;
-  margin-left: 20px;
+  margin-left: 30px;
   top: 120px;
 }
 
 .password-reset-newpin-input {
   position: absolute;
-  margin-left: 20px;
+  margin-left: 30px;
   top: 160px;
   background-color: transparent;
   text-decoration: none;
@@ -748,7 +748,7 @@ input {
 .password-reset-submit {
   position: absolute;
   bottom: 30px;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 @media screen and (min-width: 0) and (max-width: 1200px) {
