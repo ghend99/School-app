@@ -669,13 +669,13 @@ input {
 
 #password-reset-container {
   position: relative;
-  top: -1635px;
+  top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 30%;
+  max-width: 16%;
   min-width: 200px;
   max-height: 300px;
-  min-height: 250px;
+  min-height: 150px;
   background-color: lightblue;
 }
 

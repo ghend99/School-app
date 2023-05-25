@@ -79,7 +79,6 @@ const loginModal = function () {
   } else {
     headerFullNameInput.value = "";
     headerPinInput.value = "";
-    headerPinInput.type = "password";
     studentInformationHeader.textContent = `Student Name: ${currentAccount.fullName}`;
     studentInformationFirstname.textContent = `First Name: ${currentAccount.firstName}`;
     studetnInformationLastname.textContent = `Last Name: ${currentAccount.lastName}`;
@@ -89,11 +88,6 @@ const loginModal = function () {
         ? "Referals: 0"
         : `Referals: ${currentAccount.referals}`;
     mainContainer.style.opacity = "1";
-    if (currentAccount.lessons1.length > 1) {
-      showStudentTiemtable();
-    } else {
-      resetTimetableInputs();
-    }
   }
 };
 

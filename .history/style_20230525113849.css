@@ -316,8 +316,6 @@ input {
 .student-information-password-reset {
   top: 230px;
   left: 23px;
-  border-bottom: solid;
-  cursor: pointer;
 }
 
 #student-management-container {
@@ -665,18 +663,6 @@ input {
   left: 23%;
   /* background-color: black;
   color: white; */
-}
-
-#password-reset-container {
-  position: relative;
-  top: -1635px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 30%;
-  min-width: 200px;
-  max-height: 300px;
-  min-height: 250px;
-  background-color: lightblue;
 }
 
 @media screen and (min-width: 0) and (max-width: 1200px) {

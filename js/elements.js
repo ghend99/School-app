@@ -79,6 +79,9 @@ const studentInformationYear = document.querySelector(
 const studentInformationReferals = document.querySelector(
   ".student-information-referals"
 );
+const studentInformationPasswordReset = document.querySelector(
+  ".student-information-password-reset"
+);
 
 /////////////////// Student Management ///////////////////
 const timetableContainer = document.getElementById("timetable-container");
