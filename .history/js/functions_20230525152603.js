@@ -181,6 +181,9 @@ const passwordReset = function () {
   const oldPassword = resetPasswordPinInput.value;
   const newPassword = resetPasswordNewPinInput.value;
   console.log(oldPassword);
+  if (currentAccount.fullName === undefined) {
+    alert("No account logged in");
+  }
 
   if (newPassword === target.pin) {
     alert(`Please choose a different pin to current.`);

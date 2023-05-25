@@ -80,15 +80,13 @@ const loginModalClose = function () {
 };
 
 const passwordResetOpen = function () {
-  if (currentAccount === undefined) {
+  passwordResetContianer.style.display = "block";
+  mainContainer.style.filter = "blur(3px)";
+  document.querySelector(
+    ".password-reset-name"
+  ).textContent = `${currentAccount.fullName}`;
+  if (currentAccount.fullName === undefined) {
     alert("No account logged in");
-    return;
-  } else {
-    document.querySelector(
-      ".password-reset-name"
-    ).textContent = `${currentAccount.fullName}`;
-    passwordResetContianer.style.display = "block";
-    mainContainer.style.filter = "blur(3px)";
   }
 };
 

@@ -80,6 +80,9 @@ const loginModalClose = function () {
 };
 
 const passwordResetOpen = function () {
+  passwordResetContianer.style.display = "block";
+  mainContainer.style.filter = "blur(3px)";
+
   if (currentAccount === undefined) {
     alert("No account logged in");
     return;
@@ -87,8 +90,6 @@ const passwordResetOpen = function () {
     document.querySelector(
       ".password-reset-name"
     ).textContent = `${currentAccount.fullName}`;
-    passwordResetContianer.style.display = "block";
-    mainContainer.style.filter = "blur(3px)";
   }
 };
 
