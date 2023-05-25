@@ -189,11 +189,12 @@ const passwordReset = function () {
   } else if (oldPassword !== target.pin) {
     alert(`Old pin does not match.`);
   } else {
+    console.log(target.pin);
     target["pin"] = newPassword;
-    pins.push(newPassword);
     const pinIndex = pins.indexOf(oldPassword);
-    if (pinIndex > -1) {
-      pins.splice(pinIndex, 1);
+    if (index > -1) {
+      // only splice array when item is found
+      array.splice(index, 1); // 2nd parameter means remove one item only
     }
   }
 };
