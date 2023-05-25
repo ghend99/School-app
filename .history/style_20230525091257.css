@@ -819,7 +819,6 @@ input {
   }
 
   #compose-message-container {
-    left: 150px;
-    min-width: 300px;
+    left: 200px;
   }
 }

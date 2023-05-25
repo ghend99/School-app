@@ -770,16 +770,6 @@ input {
     min-width: 50px;
     font-size: 8px;
   }
-
-  #create-account-container {
-    left: 200px;
-    top: -650px;
-  }
-
-  #compose-message-container {
-    top: -1150px;
-    left: 200px;
-  }
 }
 
 @media screen and (min-width: 0) and (max-width: 377px) {
@@ -788,18 +778,15 @@ input {
   }
 
   #login-container {
-    left: 190px;
-    min-width: 300px;
-    top: 350px;
+    left: 200px;
   }
 
   #create-account-container {
-    left: 180px;
-    top: -650px;
+    left: 200px;
   }
 
   #compose-message-container {
-    left: 180px;
+    left: 200px;
   }
 }
 
@@ -819,7 +806,6 @@ input {
   }
 
   #compose-message-container {
-    left: 150px;
-    min-width: 300px;
+    left: 200px;
   }
 }

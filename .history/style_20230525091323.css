@@ -819,7 +819,7 @@ input {
   }
 
   #compose-message-container {
-    left: 150px;
-    min-width: 300px;
+    left: 180px;
+    min-width: 200px;
   }
 }
