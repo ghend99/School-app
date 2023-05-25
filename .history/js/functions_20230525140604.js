@@ -178,16 +178,12 @@ const passwordReset = function () {
   const target = students.find(
     (stu) => stu.fullName === `${currentAccount.fullName}`
   );
+  console.log(target.pin);
   const oldPassword = resetPasswordPinInput.value;
-  const newPassword = resetPasswordNewPinInput.value;
+  const
   console.log(oldPassword);
-  if (newPassword === target.pin) {
+  if (oldPassword === target.pin) {
     alert(`Please choose a different pin to current.`);
-  } else if (oldPassword !== target.pin) {
-    alert(`Old pin does not match.`);
-  } else {
-    console.log(target.pin);
-    target["pin"] = newPassword;
   }
 };
 

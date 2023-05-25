@@ -137,5 +137,4 @@ btnPasswordResetClose.addEventListener("click", function (e) {
 btnPasswordResetSubmit.addEventListener("click", function (e) {
   e.preventDefault();
   passwordReset();
-  passwordResetClose();
 });

@@ -187,7 +187,6 @@ const passwordReset = function () {
     alert(`Old pin does not match.`);
   } else {
     console.log(target.pin);
-    target["pin"] = newPassword;
   }
 };
 

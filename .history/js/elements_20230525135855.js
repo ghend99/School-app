@@ -129,7 +129,3 @@ const btnPasswordResetClose = document.querySelector(".password-reset-close");
 const resetPasswordPinInput = document.querySelector(
   ".password-reset-pin-input"
 );
-const btnPasswordResetSubmit = document.querySelector(".password-reset-submit");
-const resetPasswordNewPinInput = document.querySelector(
-  ".password-reset-newpin-input"
-);

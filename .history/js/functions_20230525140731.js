@@ -183,11 +183,8 @@ const passwordReset = function () {
   console.log(oldPassword);
   if (newPassword === target.pin) {
     alert(`Please choose a different pin to current.`);
-  } else if (oldPassword !== target.pin) {
-    alert(`Old pin does not match.`);
   } else {
     console.log(target.pin);
-    target["pin"] = newPassword;
   }
 };
 
