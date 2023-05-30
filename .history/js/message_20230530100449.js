@@ -21,7 +21,6 @@ const sendMessage = function () {
     composeMessageSubject.value = "";
     alert(`Message Sent`);
     updateInbox(reciever, currentAccount, message);
-    console.log(reciever);
   }
 };
 
